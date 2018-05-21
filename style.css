@@ -59,6 +59,10 @@ body {
 	width: 100%;
 }
 
+a {
+    color: white;
+}
+
 /* Header
 -----------------------------------------------------------------------------*/
 .header {
@@ -88,6 +92,10 @@ body {
 h2 {
     font-size: 1rem;
     color: #0000cc;
+}
+
+section#community h2 {
+    margin-top: 1rem;
 }
 
 /* Middle
@@ -125,6 +133,7 @@ h2 {
 .footer {
 	background: #0000cc;
     color: #ffffff;
-    font-size: 1em;
-    padding: .5rem; 
+    font-size: 1rem;
+    text-align: center;
+    
 }
