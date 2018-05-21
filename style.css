@@ -1,4 +1,8 @@
-/* Eric Meyer's CSS Reset */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -8,14 +12,19 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	
+    margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
+article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
@@ -39,79 +48,83 @@ table {
 }
 /* End of Eric Meyer's CSS Reset */
 
-article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
-	display: block;
-}
-body {
-	font: 12px/18px Arial, sans-serif;
-	width: 100%;
-}
-.wrapper {
-	width: 1000px;
-	margin: 0 auto;
+
+@font-face {
+    font-family: sil;
+    src: url(/assets/silom.woff);
 }
 
+body {
+    font-family: sil, sans-serif;
+	width: 100%;
+}
 
 /* Header
 -----------------------------------------------------------------------------*/
 .header {
-	
 	background: #0000cc;
-    font-size: 5em;
-    line-height: 2em;
-    padding: 1em;
     height: 50vh;
     color: #ffffff;
-    
 }
-.burger-menu-white {display: flex;
-   
+
+.burger-menu-white {
+    float: right;
+    width: 10%;
+    margin: 1rem;
+}
+
+#heading {
+    transform: translateY(50%);
+    font-size: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+#featured-heading {
+    font-size: 2rem;
+    color: #0000cc;
+}
+
+h2 {
+    font-size: 1rem;
+    color: #0000cc;
 }
 
 /* Middle
 -----------------------------------------------------------------------------*/
-.content { background-color: #ffffff;
-    
-    padding: 1.5em;
+.content { 
+    background-color: #ffffff;
+    padding: 1.5rem;
+    padding-bottom: 0;
     text-align: center;
     color: white;
-    
 }
 
-button { height: 10%;
-width: 55%;
-font-size: 5em;
-    background-color: #0000cc;
-    color: white;}
-
-
-
-.featured { height:55%;
-width:55%;
-
-}
-h2{font-size: 6em;
-line-height: 1em;
-    color: #0000cc
+.featured { 
+    width: 80%;
+    margin-top: 2rem;
 }
 
-.community-icons { 
-    
-    text-align: center;
-   
-    height: 20%;
-width: 20%;}
+.featured#first {
+    margin-top: 0;
+}
 
-.discord-icon-mobile {height: 50%;
-width:30%;
+#community-icons li {
+    display: inline-block;
+}
+
+.community-icons {
+    width: 50px;
+}
+
+#discord {
+    width: 65px;
 }
 /* Footer
 -----------------------------------------------------------------------------*/
 .footer {
-	
 	background: #0000cc;
     color: #ffffff;
-    font-size: 5em;
-    padding: 1em;
-  
+    font-size: 1em;
+    padding: .5rem; 
 }

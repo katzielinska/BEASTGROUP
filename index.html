@@ -3,9 +3,10 @@
 <head>
 	<meta charset="utf-8" />
 	<!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script><![endif]-->
-	<title></title>
+	<title>Suits 'n' Sandals Front Page</title>
 	<meta name="keywords" content="" />
 	<meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="style.css" rel="stylesheet">
 </head>
 
@@ -13,37 +14,44 @@
 
 <div class="wrapper">
 
-	<header class="header">
+    <header class="header">
         <img src="images/icons/burger%20menu.png" alt="burger menu" class="burger-menu-white">
-		<h1> Hi! We are Suits and Sandals and we create games for fun!</h1>
-        
+		<h1>
+            <div id="heading">Hi!<br>We are Suits and Sandals and we create games for fun!
+            </div>
+        </h1>
     </header>
+    
 	<main class="content">
-        <button> Featured </button>
+        <h2 id="featured-heading">Featured Games</h2>
         <section>
-        <ul>
-       <li> <a href="">  <img src="images/featured/Pug.jpg" alt="" class="featured"></a> </li> 
-       <li> <a href="">  <img src="images/featured/Pug.jpg" alt="" class="featured"></a>  </li>  <li> <a href="">  <img src="images/featured/Pug.jpg" alt="" class="featured"></a>  </li>
+            <ul>
+                <li> <a href=""> <img src="images/featured/feature-1.png" alt="War Girl featured picture" class="featured" id="first"></a> 
+                </li>
+                <li> <a href=""> <img src="images/featured/feature-3.png" alt="Vista Quest featured picture" class="featured"></a>  
+                </li>
+                <li> <a href=""> <img src="images/featured/feature-2.png" alt="Khimera featured picture" class="featured"></a>  
+                </li>
             </ul>
-            </section>
+        </section>
             
-             <section>
-            <h2>Join our community!
-                </h2>
-           <ul>
-             <li>  <a href="" > <img src="images/icons/twitter%20icon%20(1).png" alt="twitter icon" class="community-icons">   </a> </li> 
-                <li> <a href="" > <img src="images/icons/discordicon.png" alt="discord icon" class="discord-icon-mobile">   </a> </li> 
-               <li>  <a href="" > <img src="images/icons/steam%20icon.png" alt="steam icon" class="community-icons">   </a>
-                 </li> 
-                </ul>
-            
-            </section> 
+        <section>
+            <h2>Join our community!</h2>
+            <ul id="community-icons">
+                <li> <a href="" > <img src="images/icons/twitter%20icon%20(1).png" alt="twitter icon" class="community-icons"> </a>
+                </li> 
+                <li> <a href="" > <img src="images/icons/discordicon.png" alt="discord icon" class="community-icons" id="discord"> </a>
+                </li> 
+                <li> <a href="" > <img src="images/icons/steam%20icon.png" alt="steam icon" class="community-icons"> </a>
+                </li> 
+            </ul>  
+        </section> 
 		
 	</main><!-- .content -->
 
-<footer class="footer"> <p> Say hi! <a href="mailto:">Contact email</a></p>
+<footer class="footer"> <p>Say hi! <a href="mailto:">Contact email</a></p>
 	
-	</footer><!-- .footer --> 
+</footer><!-- .footer --> 
 
 </div><!-- .wrapper -->
 
