@@ -69,24 +69,32 @@ a {
 	background: #0000cc;
     height: 50vh;
     color: #ffffff;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 10% 1fr;
+    grid-template-areas:
+    "menu"
+    "heading";
 }
 
 .burger-menu-white {
-    float: right;
     width: 10%;
     margin: 1rem;
+    grid-area: menu;
+    justify-self: end;
 }
 
 #heading {
-    transform: translateY(50%);
-    font-size: 2rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    font-size: 1.5rem;
+    grid-area: heading;
+    justify-self: center;
+    align-self: center;
 }
 
 #featured-heading {
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: #0000cc;
+    padding-bottom: 1.5rem;
 }
 
 h2 {
