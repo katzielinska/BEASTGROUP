@@ -137,14 +137,16 @@ table {
 
 /* End of Eric Meyer's CSS Reset */
 
-@font-face {
+/*@font-face {
     font-family: sil;
     src: url(/assets/silom.woff);
 }
+*/
 
 body {
-    font-family: sil, sans-serif;
+    font-family: Ubuntu, sans-serif;
     width: 100%;
+
 }
 
 a {
@@ -155,11 +157,11 @@ a {
 -----------------------------------------------------------------------------*/
 
 nav {
-    background: #0000cc;
+    background: #0E6FBE;
     height: 50px;
-    display:grid;
+    display: grid;
     grid-template-columns: 1fr 1fr;
-    
+
 }
 
 
@@ -168,43 +170,45 @@ nav {
 -----------------------------------------------------------------------------*/
 
 .welcome {
-    background: #0000cc;
-    color:white;
-    height:60vh;
+    background: #0E6FBE;
+    color: white;
+    height: 60vh;
     display: grid;
     grid-template-columns: 50px auto 50px;
     grid-template-rows: 50%;
-    
+    text-align: left;
+
 }
 
 
 .burger-menu {
     width: 30px;
     margin: 1rem;
-    justify-self:flex-end;
+    justify-self: flex-end;
 
 }
 
-.logo{
+.logo {
     align-self: center;
 }
 
 .heading {
     grid-column-start: 2;
-    align-self: flex-start
+    align-self: flex-start;
+    font-size: 1.5rem;
 }
 
 
 #featured-heading {
-    font-size: 1.5rem;
-    color: #0000cc;
+    font-size: 2em;
+    color: #0E6FBE;
     padding-bottom: 1.5rem;
 }
 
 .hi {
     width: 40vw;
-    grid-column-start:2;
-    align-self:flex-end;
+    grid-column-start: 2;
+    align-self: flex-end;
 
 }
 
@@ -215,18 +219,20 @@ section#community h2 {
 
 .content {
     background-color: #ffffff;
-    padding: 1.5rem;
-    padding-bottom: 0;
+
     text-align: center;
     color: white;
 }
 
-.featured {
-    width: 80%;
+#featured {
     margin-top: 2rem;
     border-radius: 2px;
-}
 
+}
+.featured{
+    width:100%;
+  
+}
 .featured#first {
     margin-top: 0;
 }
@@ -235,8 +241,7 @@ section#community h2 {
 
 h3 {
     font-size: 2rem;
-    color: #0000cc;
-    padding-top: 1em;
+    color: #0E6FBE;
 
 }
 
@@ -245,7 +250,7 @@ h3 {
 }
 
 #community-icons {
-    margin: 1em 0em 2em 0em
+    margin: 1em 0em 2em 0em;
 }
 
 .community-icons {
@@ -260,16 +265,127 @@ h3 {
 -----------------------------------------------------------------------------*/
 
 .footer {
-    background: #0000cc;
+    background: #0E6FBE;
     color: #ffffff;
     font-size: 1rem;
     text-align: center;
-    height:50px;
+    height: 50px;
     display: flex;
-    align-items:center;
+    align-items: center;
     justify-content: space-around;
-    font-family: Sintony;
     text-transform: uppercase;
 
+
+}
+
+
+@media only screen and (min-width: 768px) {
+   
+    .welcome {
+        display: grid;
+        display: grid;
+        grid-area: social;
+
+
+    }
+    #featured img {
+    width: 500px
+    }
+    
+    #featured-heading{
+        display: none;
+    }
+
+    footer,
+    #community {
+        clear: left;
+
+    }
+    #community {
+        grid-area: community;
+        background: #0E6FBE;
+
+    }
+    h3 {
+        color: white;
+        font-size:1em;
+        text-transform: uppercase;
+    }
+    #featured {
+        grid-area: featured;
+    }
+
+    .main {
+        display: grid;
+        grid-template-columns: 33% 1fr;
+        grid-template-rows: 50% 1fr;
+        grid-template-areas: "social featured" "community featured";
+
+    }
+    .hi {
+        width: 50%;
+    }
+    
+    
+/* SLIDES */
+    
+    .slides {
+        display: none;
+    }
+    
+    /* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+    .prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+    .dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+    
+    .active, .dot:hover {
+  background-color: #717171;
+}
+    /* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+    
+    @-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+    
+    
+    
 
 }

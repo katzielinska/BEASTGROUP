@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script><![endif]-->
@@ -9,6 +10,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Sintony:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    
 </head>
 
 <body>
@@ -17,40 +20,52 @@
 
         <header class="header">
             <nav> <a href="index.html" class="logo">logo</a>
-                <img src="images/icons/burger%20menu.png" alt="burger menu" class="burger-menu"></nav>
+                <img src="images/icons/menu.svg" alt="burger menu" class="burger-menu"></nav>
         </header>
-        <section class="welcome"><img src="images/hi.svg" class="hi">
-            <h1 class="heading">We are Suits and Sandals and we create games for fun!
-            </h1>
-        </section>
-
 
 
         <main class="content">
-            <h3 id="featured-heading">Featured Games</h3>
-            <section id="featured">
-                <ul>
-                    <li> <a href=""> <img src="images/featured/feature-1.png" alt="War Girl featured picture" class="featured" id="first"></a>
-                    </li>
-                    <li> <a href=""> <img src="images/featured/feature-3.png" alt="Vista Quest featured picture" class="featured"></a>
-                    </li>
-                    <li> <a href=""> <img src="images/featured/feature-2.png" alt="Khimera featured picture" class="featured"></a>
-                    </li>
-                </ul>
-            </section>
 
-            <section id="community">
-                <h3>Join our community!</h3>
-                <ul id="community-icons">
-                    <li> <a href=""> <img src="images/icons/twitter%20icon%20(1).png" alt="twitter icon" class="community-icons"> </a>
-                    </li>
-                    <li> <a href=""> <img src="images/icons/discordicon.png" alt="discord icon" class="community-icons" id="discord"> </a>
-                    </li>
-                    <li> <a href=""> <img src="images/icons/steam%20icon.png" alt="steam icon" class="community-icons"> </a>
-                    </li>
-                </ul>
-            </section>
+            <div class="main">
+                <section class="welcome">
+                    <img src="images/hi.svg" class="hi">
+                    <h1 class="heading">We are Suits and Sandals and we create games for fun!
+                    </h1>
+                </section>
 
+
+                <section id="featured">
+                    <h3 id="featured-heading">Featured Games</h3>
+                    <ul>
+                        <li class="slides fade"> <a href=""> <img src="images/featured/feature-1.png" alt="War Girl featured picture" class="featured" id="first"></a>
+                        </li>
+                        <li class="slides fade"> <a href=""> <img src="images/featured/feature-3.png" alt="Vista Quest featured picture" class="featured"></a>
+                        </li>
+                        <li class="slides fade"> <a href=""> <img src="images/featured/feature-2.png" alt="Khimera featured picture" class="featured"></a>
+                        </li>
+                    </ul>
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </section>
+                <div>
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+                
+                
+                <section id="community">
+                    <h3>Join our community!</h3>
+                    <ul id="community-icons">
+                        <li> <a href=""> <img src="images/icons/twitter%20icon%20(1).png" alt="twitter icon" class="community-icons"> </a>
+                        </li>
+                        <li> <a href=""> <img src="images/icons/discordicon.png" alt="discord icon" class="community-icons" id="discord"> </a>
+                        </li>
+                        <li> <a href=""> <img src="images/icons/steam%20icon.png" alt="steam icon" class="community-icons"> </a>
+                        </li>
+                    </ul>
+                </section>
+            </div>
         </main>
         <!-- .content -->
 
@@ -64,4 +79,38 @@
     <!-- .wrapper -->
 
 </body>
+    
+<script src="js/jquery-3.3.1.min.js"></script>
+<script>
+if ($(window).width() > 768) {
+   
+var slideIndex = 1;
+showSlides(slideIndex);
+setInterval(function(){ showSlides(++slideIndex); }, 3000);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("slides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+}
+</script>
 </html>
