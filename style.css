@@ -137,11 +137,10 @@ table {
 
 /* End of Eric Meyer's CSS Reset */
 
-/*@font-face {
+@font-face {
     font-family: sil;
     src: url(/assets/silom.woff);
 }
-*/
 
 @keyframes show {
     0% {
@@ -150,16 +149,31 @@ table {
     }
     100% {
         opacity: 1;
-        transform: none;
+        transform: translateY(50%);
+    }
+}
+
+@keyframes expand {
+    0% {
+        background: #0E6FBE;
+        height: auto;
+    }
+    100% {
+        background: #333333;
+        height: 100vh;
     }
 }
 
 body {
-    font-family: Ubuntu, sans-serif;
+    font-family: sil;
 }
 
 a {
     color: white;
+}
+
+.burger-menu {
+    margin: 1rem;
 }
 
 /* Header
@@ -167,17 +181,29 @@ a {
 
 header {
     background: #0E6FBE;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: 10% 1fr 10%;
+    grid-auto-rows: auto;
+    grid-template-areas: 
+        "logo nav burger";
+    transition: all 0.5s ease;
 }
 
 #main-nav {
     opacity: 0;
-    position: fixed;
-    top: 0;
-    left: 0;
+    grid-area: nav;
+    justify-self: center;
+    align-self: center;
+}
+
+nav li {
+    padding: 1rem;
+}
+
+#actual-nav {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
 }
 
 .with-nav #main-nav {
@@ -185,19 +211,6 @@ header {
     animation-fill-mode: forwards;
     animation-timing-function: ease-in-out;
     animation-duration: 1s;
-}
-
-.access-aid {
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 40px;
-    height: 0;
-    padding-top: 40px;
-    overflow: hidden;
-    border: 1px solid #ccc;
-    background: white 10px 10px / 20px 20px no-repeat;
 }
 
 /* Middle
@@ -211,15 +224,10 @@ header {
     grid-template-columns: 50px auto 50px;
     grid-template-rows: 50%;
     text-align: left;
-
-}
-
-.burger-menu {
-    margin: 1rem;
 }
 
 .logo {
-    float: left;
+    grid-area: logo;
 }
 
 .heading {
@@ -227,7 +235,6 @@ header {
     align-self: flex-start;
     font-size: 1.5rem;
 }
-
 
 #featured-heading {
     font-size: 2em;
@@ -242,14 +249,12 @@ header {
 
 }
 
-
 section#community h2 {
     margin-top: 1rem;
 }
 
 .content {
-    background-color: #666;
-
+    background-color: #000;
     text-align: center;
     color: white;
 }
@@ -259,20 +264,14 @@ section#community h2 {
     border-radius: 2px;
 
 }
+
 .featured{
     width:100%;
-  
 }
-.featured#first {
-    margin-top: 0;
-}
-
-
 
 h3 {
     font-size: 2rem;
     color: #0E6FBE;
-
 }
 
 #community-icons li {
@@ -292,8 +291,8 @@ h3 {
 }
 
 .burger-menu {
-    display: inline-block;
     cursor: pointer;
+    grid-area: burger;
 }
 
 .bar1, 
@@ -317,19 +316,12 @@ h3 {
 }
 
 
-
-
 /* Middle Games
 ---------------------------------------------------------------------------------*/
 
-.icons-small { 
-
-width: 35px;}
-
-
-
-
-
+.icons-small {
+    width: 35px;
+}
 
 /* Footer
 -----------------------------------------------------------------------------*/

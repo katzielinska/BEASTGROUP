@@ -10,7 +10,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Sintony:400,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
 
 </head>
 
@@ -20,14 +19,23 @@
 
         <header class="header">
             <a href="index.html" class="logo">logo</a>
-            <p><a href="#main-nav" id="access-nav" class="access-aid">Skip to navigation</a></p>
+            
+            <div class="burger-menu" onclick="xify(this)">
+                <a href="#main-nav" id="access-nav" class="access-aid">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </a>
+            </div>
+            
             <nav id="main-nav">
-                <ul>
+                <ul id="actual-nav">
                     <li><a href="">Home</a></li>
                     <li><a href="">News</a></li>
                     <li><a href="">About Us</a></li>
+                    <li><a href="" id="access-top" class="access-aid">Skip to top</a></li>
                 </ul>
-            <p><a href="#body" id="access-top" class="access-aid">Skip to top</a></p>
+            
             </nav>
         </header>
 
@@ -102,26 +110,40 @@
     <!-- .wrapper -->
 
 </body>
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
 <script>
 var nav = document.getElementById('access-nav'),
-    body = document.body;
+    body = document.body,
+    header = document.header,
+    topButton = document.querySelector("access-top"),
+    lastScrollTop = 0;
     
-var lastScrollTop = 0;
-window.addEventListener("scroll", function(){
-   var st = window.pageYOffset || document.documentElement.scrollTop;
+$(window).on("scroll", function(){
+   var st = $(this).scrollTop()
    if (st > lastScrollTop){
-       document.querySelector("a.access-aid").style.transform = "scale=0.5;";
-       console.log(document.querySelector("a.access-aid").style.transform);
+       $("#main-nav").css("transform", "scale(0.5)");
    } else {
-       document.querySelector("a.access-aid").style.transform = "none;";
+       $("#main-nav").css("transform", "none");
    }
    lastScrollTop = st;
-}, false);
+});
     
+function xify(x) {
+    x.classList.toggle("xified");
+}
 
 nav.addEventListener('click', function(e) {
     body.className = body.className? '' : 'with-nav';
     e.preventDefault();
+});
+    
+body.classList.contains("with-nav")? header.classList.add("expand") : "";
+    
+topButton.addEventListener("click", function() {
+    body.scrollTop = 0;
 });
 </script>
 </html>
