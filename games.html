@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script><![endif]-->
-    <title>Suits 'n' Sandals Front Page</title>
+    <title>Games|Suits 'n' Sandals</title>
     <meta name="keywords" content="" />
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,32 +20,15 @@
 
         <header class="header">
             <a href="index.html" class="logo">logo</a>
-                <div class="burger-menu" onclick="xify(this)">
-  <div class="bar1"></div>
-  <div class="bar2"></div>
-  <div class="bar3"></div>
-</div>
-            
-            
-            <nav> 
-               <ul>
-            
-                <li><a href="">
-                  Games  </a>   </li> 
-                <li><a href="">
-                  About  </a>   </li> 
-                <li><a href="">
-                  News  </a>   </li>
-                
-                </ul> 
+            <p><a href="#main-nav" id="access-nav" class="access-aid">Skip to navigation</a></p>
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">News</a></li>
+                    <li><a href="">About Us</a></li>
+                </ul>
+            <p><a href="#body" id="access-top" class="access-aid">Skip to top</a></p>
             </nav>
-            
-            
-            
-            
-            
-            
-            
         </header>
 
 
@@ -120,8 +103,25 @@
 
 </body>
 <script>
-function xify(x) {
-    x.classList.toggle("xified");
-}
+var nav = document.getElementById('access-nav'),
+    body = document.body;
+    
+var lastScrollTop = 0;
+window.addEventListener("scroll", function(){
+   var st = window.pageYOffset || document.documentElement.scrollTop;
+   if (st > lastScrollTop){
+       document.querySelector("a.access-aid").style.transform = "scale=0.5;";
+       console.log(document.querySelector("a.access-aid").style.transform);
+   } else {
+       document.querySelector("a.access-aid").style.transform = "none;";
+   }
+   lastScrollTop = st;
+}, false);
+    
+
+nav.addEventListener('click', function(e) {
+    body.className = body.className? '' : 'with-nav';
+    e.preventDefault();
+});
 </script>
 </html>
