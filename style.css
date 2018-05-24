@@ -145,7 +145,8 @@ table {
 
 body {
     font-family: Ubuntu, sans-serif;
-    width: 100%;
+    margin: 0 auto;
+
 
 }
 
@@ -161,7 +162,7 @@ nav {
     height: 50px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-
+      box-shadow: 0 1px 6px rgba(0,0,0,0.16), 0 2px 6px rgba(0,0,0,0.23);
 }
 
 
@@ -218,7 +219,6 @@ section#community h2 {
 }
 
 .content {
-    background-color: #ffffff;
 
     text-align: center;
     color: white;
@@ -229,10 +229,12 @@ section#community h2 {
     border-radius: 2px;
 
 }
-.featured{
-    width:100%;
-  
+
+.featured {
+    width: 100%;
+
 }
+
 .featured#first {
     margin-top: 0;
 }
@@ -261,46 +263,6 @@ h3 {
     width: 90px;
 }
 
-.burger-menu {
-    display: inline-block;
-    cursor: pointer;
-}
-
-.bar1, 
-.bar2, 
-.bar3 {
-    width: 35px;
-    height: 5px;
-    background-color: #fff;
-    margin: 6px 0;
-    transition: 0.4s ease;
-}
-
-.xified .bar1 {
-    transform: rotate(-45deg) translate(-9px, 6px);
-}
-
-.xified .bar2 {opacity: 0;}
-
-.xified .bar3 {
-    transform: rotate(45deg) translate(-8px, -8px);
-}
-
-
-
-
-/* Middle Games
----------------------------------------------------------------------------------*/
-
-.icons-small { 
-
-width: 35px;}
-
-
-
-
-
-
 /* Footer
 -----------------------------------------------------------------------------*/
 
@@ -318,9 +280,108 @@ width: 35px;}
 
 }
 
+/* game page
+-----------------------------------------------------------------------------*/
+
+#game {
+    color: #3d3d3d;
+    text-align: justify;
+    font-family: Sintony;
+}
+
+#game-title {
+    color: #0E6FBE;
+    font-size: 1.5em;
+    margin: 1rem;
+
+
+}
+
+strong {
+    font-size: 2.5em;
+    
+}
+
+iframe {
+    display:block;
+    margin: auto;
+    width:90vw;
+    height: 30vh;
+}
+
+p,
+h2,
+ul {
+    margin: 1rem;
+}
+
+h2{
+    text-transform:uppercase;
+    font-weight: bold;
+    font-size:1.5rem;
+}
+
+.linebreak{
+    background: #0E6FBE;
+    height:2px;
+    margin:1rem;
+    
+}
+.specslist{
+    display:flex;
+    text-align: left;
+}
+
+.specsone{
+    font-weight: bold;
+    display: inline-block;
+    width:50%;
+}
+
+button{
+    display:block;
+    width:80%;
+    font-size: 1.2em;
+    background-color:#1C1C1C;
+    border: none;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    text-transform: uppercase;
+    border-radius: 2px;
+    margin: 2rem auto;
+    
+    
+}
+
+button a{
+    display: grid;
+    grid-template-columns: 66% auto;
+    text-decoration: none;
+    text-align:center;
+    font-family: sintony;
+    justify-items: center;
+    align-items: center;
+}
+
+button img{
+    width:50px;
+}
+
+p a{
+    color:#3d3d3d;
+    text-transform: uppercase
+}
+
+.gamegallery img{
+    display:block;
+    margin: 1rem auto;
+    width:90%
+}
+/*MEDIA QUERY-----------------------------------------------------------------------------------------*/
+
+
 
 @media only screen and (min-width: 768px) {
-   
+
     .welcome {
         display: grid;
         display: grid;
@@ -329,10 +390,10 @@ width: 35px;}
 
     }
     #featured img {
-    width: 500px
+        width: 500px
     }
-    
-    #featured-heading{
+
+    #featured-heading {
         display: none;
     }
 
@@ -348,7 +409,7 @@ width: 35px;}
     }
     h3 {
         color: white;
-        font-size:1em;
+        font-size: 1em;
         text-transform: uppercase;
     }
     #featured {
@@ -365,67 +426,77 @@ width: 35px;}
     .hi {
         width: 50%;
     }
-    
-    
-/* SLIDES */
-    
+
+
+    /* SLIDES */
     .slides {
         display: none;
     }
-    
-    /* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-}
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-    .prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-    .dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-    
-    .active, .dot:hover {
-  background-color: #717171;
-}
-    /* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-    
-    @-webkit-keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
 
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-    
-    
-    
+    /* Next & previous buttons */
+    .prev,
+    .next {
+        cursor: pointer;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+    }
+    .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }
+    .prev:hover,
+    .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+    .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+    }
+
+    .active,
+    .dot:hover {
+        background-color: #717171;
+    }
+    /* Fading animation */
+    .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+
+    @-webkit-keyframes fade {
+        from {
+            opacity: .4
+        }
+        to {
+            opacity: 1
+        }
+    }
+
+    @keyframes fade {
+        from {
+            opacity: .4
+        }
+        to {
+            opacity: 1
+        }
+    }
+
+
+
 
 }
