@@ -181,12 +181,12 @@ h6 {
 .header {
     background: #0E6FBE;
     display: grid;
-    grid-template-columns: 10% 1fr 10%;
+    grid-template-columns: 5% 5% 1fr 5% 5%;
     grid-auto-rows: auto;
     grid-template-areas: 
-        "logo nav burger";
+        ". logo nav burger .";
     align-items: center;
-    transition: all 0.5s ease;
+    transition: 0.5s ease;
     position: fixed;
     top: 0;
     left: 0;
@@ -197,13 +197,15 @@ h6 {
 
 .burger-menu {
     margin: 1rem;
-    margin-left: -1rem;
+    margin-right: 0;
+    min-width: 35px;
     align-self: baseline;
     grid-area: burger;
+    justify-self: end;
 }
 
 nav {
-margin-top: -115%;
+    margin-top: -115%;
 }
 
 nav.dole {
@@ -212,12 +214,11 @@ nav.dole {
 
 .logo {
     grid-area: logo;
-    margin: 1rem;
 }
 
 .logo.scaled {
     align-self: baseline;
-    margin: 2rem;
+    margin: 1.5rem;
 }
 
 .burger-menu a.xified {
@@ -644,7 +645,67 @@ li em{
 -----------------------------------------------------------------------------*/
 
 @media only screen and (min-width: 768px) {
-
+    
+    /* NAV
+    -----------------------------------------------------------------------------*/
+    
+    .header {
+        grid-template-columns: 5% 5% 1fr 5%;
+        grid-template-areas: 
+        ". logo nav .";
+    }
+    
+    .burger-menu {
+        display: none;
+    }
+    
+    nav {
+        margin-top: 0;
+    }
+    
+    nav li {
+        padding: 0;
+        padding-left: 1rem;
+        font-size: 1rem;
+    }
+    
+    nav li a {
+        text-decoration: none;
+    }
+    
+    nav li a:hover {
+        text-decoration: underline;
+    }
+    
+    #actual-nav {
+        flex-flow: row nowrap;
+    }
+    
+    #actual-nav li:first-of-type {
+        display: none;
+    }
+    
+    #main-nav {
+        justify-self: end;
+    }
+    
+    
+    /* GENERAL REUSABLE
+    -----------------------------------------------------------------------------*/
+    
+    body {
+       margin-top: 21px;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     .welcome {
         display: grid;
         display: grid;
