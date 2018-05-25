@@ -288,6 +288,9 @@ h3 {
     color: #0E6FBE;
     font-size: 1.5em;
     margin: 1rem;
+    line-height:1;
+    font-weight:bold;
+  
 
 
 }
@@ -527,6 +530,7 @@ li em{
     }
 
     .main {
+        text-align: center;
         display: grid;
         grid-template-columns: 33% 1fr;
         grid-template-rows: 50% 1fr;
