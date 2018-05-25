@@ -41,7 +41,7 @@
         <main class="content">
 
                 <section id="games-heading">
-                    <h1>Games</h1>
+                    <h1 class="h1-gamespage">Games</h1>
                     <ul id="sort">
                         <li id="all" class="underlined">All</li>
                         <li id="pc">PC</li>
@@ -52,7 +52,7 @@
                     <ul>
                         <li class="pc"> <a href=""> <img src="images/featured/war-girl.png" alt="War Girl " class="game-picture" ></a>
                         </li>
-                        <li class="pc"> <a href=""> <img src="images/featured/khimera.png" alt="Khimera" class="game-picture" ></a>
+                        <li class="pc"> <a href="gamepage.html"> <img src="images/featured/khimera.png" alt="Khimera" class="game-picture" ></a>
                         </li>
                         <li class="pc"> <a href=""> <img src="images/featured/throneless.png" alt="Throneless" class="game-picture" ></a>
                         </li>
@@ -111,7 +111,7 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
 <script>
-    $(document).ready(function() {
+$(document).ready(function() {
         
     const PC = $(".pc"),
           ARCADE = $(".arcade"),
@@ -119,12 +119,12 @@
           SELPC = $("#pc"),
           SELARCADE = $("#arcade");
         
-        $(".burger-menu").click(function(){
-            $("#main-nav").toggleClass("dole",500);
-            $(".header").toggleClass("dole",100);
-            $(".burger-menu a").toggleClass("xified");
-            $(".logo").toggleClass("scaled");
-        });
+    $(".burger-menu").click(function(){
+        $("#main-nav").toggleClass("dole",200);
+        $(".header").toggleClass("dole",200);
+        $(".burger-menu a").toggleClass("xified");
+        $(".logo").toggleClass("scaled");
+    });
 
     $(SELALL).on('click', function () {
         PC.removeClass("invisible");
@@ -154,36 +154,18 @@
         SELALL.removeClass("underlined");
     });
 
-});
-/*var nav = document.getElementById('access-nav'),
-    body = document.body,
-    header = document.header,
-    topButton = document.querySelector("access-top"),
-    lastScrollTop = 0;
-    
-$(window).on("scroll", function(){
-   var st = $(this).scrollTop()
-   if (st > lastScrollTop){
-       $("#main-nav").css("transform", "scale(0.5)");
-   } else {
-       $("#main-nav").css("transform", "none");
-   }
-   lastScrollTop = st;
-});
-    
-function xify(x) {
-    x.classList.toggle("xified");
-}
+    var lastScrollTop = 0;
 
-nav.addEventListener('click', function(e) {
-    body.className = body.className? '' : 'with-nav';
-    e.preventDefault();
+    $(window).on("scroll", function(){
+        var st = $(this).scrollTop()
+        if (st > lastScrollTop){
+            $(".header").css("transform", "translateY(-100%)");
+        } else {
+            $(".header").css("transform", "none");
+        }
+        lastScrollTop = st;
+    });
+
 });
-    
-body.classList.contains("with-nav")? header.classList.add("expand") : "";
-    
-topButton.addEventListener("click", function() {
-    body.scrollTop = 0;
-});*/
 </script>
 </html>

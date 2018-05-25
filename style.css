@@ -109,7 +109,7 @@ section {
 }
 
 body {
-    line-height: 1;
+    line-height: 1.3;
 }
 
 ol,
@@ -137,6 +137,10 @@ table {
 
 /* End of Eric Meyer's CSS Reset */
 
+
+/* GENERAL, !REUSABLE!
+-----------------------------------------------------------------------------*/
+
 @font-face {
     font-family: sil;
     src: url(/assets/silom.woff);
@@ -152,33 +156,13 @@ table {
     }
 }
 
-body {
-   
-    margin-top: 71px;
-    font-family: 'Sintony', sans-serif;
-}
-
 a {
     color: white;
 }
 
-.burger-menu {
-    margin: 1rem;
-    margin-left: -1rem;
-    align-self: baseline;
-}
-
-nav {
-margin-top: -115%;
-}
-
-nav.dole {
-    margin-top: 0;
-}
-
-section#games-heading h1 {
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
+body {
+    margin-top: 71px;
+    font-family: 'Sintony', sans-serif;
 }
 
 h1,
@@ -190,7 +174,8 @@ h6 {
     font-family: sil;
 }
 
-/* Header
+
+/* THE HEADER
 -----------------------------------------------------------------------------*/
 
 .header {
@@ -207,6 +192,22 @@ h6 {
     left: 0;
     right: 0;
     z-index: 2;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.16), 0 2px 6px rgba(0, 0, 0, 0.23);
+}
+
+.burger-menu {
+    margin: 1rem;
+    margin-left: -1rem;
+    align-self: baseline;
+    grid-area: burger;
+}
+
+nav {
+margin-top: -115%;
+}
+
+nav.dole {
+    margin-top: 0;
 }
 
 .logo {
@@ -231,7 +232,6 @@ h6 {
     grid-area: nav;
     justify-self: center;
     align-self: center;
-    
 }
 
 nav li {
@@ -244,7 +244,6 @@ nav li {
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-evenly;
-    
 }
 
 .scaled {
@@ -258,7 +257,29 @@ nav li {
     transition: 0.5s ease-in-out;
 }
 
-/* Middle
+.bar1, 
+.bar2, 
+.bar3 {
+    height: 5px;
+    background-color: #fff;
+    margin: 6px 0;
+    transition: 0.4s ease;
+}
+
+.xified .bar1 {
+    transform: rotate(-45deg) translate(-9px, 7px);
+}
+
+.xified .bar2 { 
+    opacity: 0;
+}
+
+.xified .bar3 {
+    transform: rotate(45deg) translate(-8px, -7px);
+}
+
+
+/* HOME PAGE SPECIFIC
 -----------------------------------------------------------------------------*/
 
 .welcome {
@@ -293,6 +314,35 @@ section#community h2 {
     margin-top: 1rem;
 }
 
+#featured {
+    margin-top: 2rem;
+    border-radius: 2px;
+}
+
+.featured{
+    width:100%;
+}
+
+#community-icons li {
+    display: inline-block;
+}
+
+#community-icons {
+    margin: 1em 0em 2em 0em;
+}
+
+.community-icons {
+    width: 80px;
+}
+
+#discord {
+    width: 90px;
+}
+
+
+/* GAMES PAGE SPECIFIC
+-----------------------------------------------------------------------------*/
+
 .content {
     display: grid;
     grid-template-columns: 5% 1fr 5%;
@@ -319,14 +369,12 @@ section#community h2 {
 .invisible {
     animation-name: show !important;
     animation-fill-mode: forwards !important;
-    animation-timing-function: ease-in-out !important;
     animation-direction: normal !important;
 }
 
 .visible {
     animation-name: show;
     animation-fill-mode: forwards;
-    animation-timing-function: ease-in-out;
     animation-direction: reverse;
 }
 
@@ -339,113 +387,276 @@ section#community h2 {
     padding: 0.5em;
     padding-left: 0;
     padding-bottom: 0;
-
-    
 }
 
 #games-list {
     grid-area: games;
 }
 
-#featured {
-    margin-top: 2rem;
-    border-radius: 2px;
+section#games-heading h1 {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
 }
 
-.featured{
-    width:100%;
-}
-
-h1 {
+h1.h1-gamespage {
     font-size: 2rem;
     color: #0E6FBE;
     border-bottom: 3px solid #0E6FBE;
 }
 
-#community-icons li {
+
+/* !ONE! GAME PAGE SPECIFIC
+-----------------------------------------------------------------------------*/
+
+#game {
+    color: #3d3d3d;
+    text-align: justify;
+    font-family: Sintony;
+}
+
+#game-title {
+    color: #0E6FBE;
+    font-size: 1.5em;
+    margin: 1rem;
+    line-height:1;
+    font-weight:bold;
+}
+
+strong {
+    font-size: 2.5em;
+
+}
+
+iframe {
+    display: block;
+    margin: auto;
+    width: 90vw;
+    height: 30vh;
+}
+
+p.p-gamepage,
+h2.h2-gamepage,
+ul.ul-gamepage {
+    margin: 1rem;
+}
+
+h2.h2-gamepage {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.linebreak {
+    background: #0E6FBE;
+    height: 3px;
+    margin: 1rem;
+
+}
+
+.specslist {
+    display: flex;
+    text-align: left;
+}
+
+.specsone {
+    font-weight: bold;
     display: inline-block;
+    width: 50%;
 }
 
-#community-icons {
-    margin: 1em 0em 2em 0em;
+#steamstore {
+    display: block;
+    width: 80%;
+    font-size: 1.2em;
+    background-color: #1C1C1C;
+    border: none;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    text-transform: uppercase;
+    border-radius: 2px;
+    margin: 2rem auto;
+
+
 }
 
-.community-icons {
-    width: 80px;
+#steamstore a {
+    display: grid;
+    grid-template-columns: 66% auto;
+    text-decoration: none;
+    text-align: center;
+    font-family: sintony;
+    justify-items: center;
+    align-items: center;
 }
 
-#discord {
-    width: 90px;
+#steamstore img {
+    width: 50px;
 }
 
-.burger-menu {
-    cursor: pointer;
-    grid-area: burger;
+p a {
+    color: #3d3d3d;
+    text-transform: uppercase;
 }
 
-.bar1, 
-.bar2, 
-.bar3 {
-   
-    height: 5px;
-    background-color: #fff;
-    margin: 6px 0;
-    transition: 0.4s ease;
+.gamegallery img {
+    display: block;
+    margin: 1rem auto;
+    width: 90%;
+}
+
+/* ABOUT PAGE SPECIFIC
+-----------------------------------------------------------------------------*/
+
+#about {
+    color: #3d3d3d;
+    text-align: left;
+    font-family: sintony;
+
+}
+
+#aboutheading {
+    color: #0E6FBE;
+    font-size: 2.5rem;
+    margin: 1rem;
+    font-weight: bold;
+
+}
+
+#about h2 {
+    color: #0E6FBE;
+}
+
+.creator {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 40%fr 1fr;
+    grid-template-areas: 'pic name' 'description description';
     
 }
 
-.xified .bar1 {
-    transform: rotate(-45deg) translate(-9px, 7px);
+
+.creatorname{
+    margin: 0 1rem;
+    font-size:1.5em;
+    font-weight:bold;
+    
+}
+.creatorintro ul{
+    font-size:0.8em;
 }
 
-.xified .bar2 { 
-    opacity: 0;
+li em{
+    font-weight:bold;
+}
+.creatordescription {
+    grid-area: description;
+        
 }
 
-.xified .bar3 {
-    transform: rotate(45deg) translate(-8px, -7px);
+.creatordescription h4{
+    margin:1rem;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+.creatorintro {
+    grid-area: name;
+    margin:1rem;
+}
+
+.creatorpic {
+    grid-area: pic;
+    margin: 1rem 0 0 1rem;
+    width:100%;
 }
 
 
-/* Middle Games
----------------------------------------------------------------------------------*/
+/* NEWS PAGE SPECIFIC
+-----------------------------------------------------------------------------*/
 
-.icons-small {
-    width: 35px;
+#news{
+    color:3d3d3d;
+    width:90%;
+    margin:0 auto;
+ 
+}
+#newsheading{
+    margin: 1rem;
+    font-family: sintony;
+    font-size:2em;
+    color:#0E6FBE;
+  font-weight: bold;  
 }
 
-/* Footer
+.newsbutton{
+    background-color:whitesmoke;
+    width:100%;
+    height:50px;
+    font-family:Sintony;
+    font-weight: bold;
+    font-size:2em;
+    margin: 1rem 0 0;
+    border:none;
+    
+    
+}
+.activebutton{
+    background-color:darkgrey;
+    
+}
+
+#buttons{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    margin:0;
+    
+    
+}
+
+
+#twitterfeed{
+    border: black 2px;
+}
+
+
+/* THE FOOTER
 -----------------------------------------------------------------------------*/
 
 .footer {
     background: #0E6FBE;
     grid-area: footer;
     color: #ffffff;
-    font-size: 0.5rem;
+    font-size: 0.6rem;
     text-align: center;
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
     justify-content: space-around;
     text-transform: uppercase;
+}
 
-
+.icons-small {
+    width: 35px;
 }
 
 
+/* END OF THE PHONE VERSION
+-----------------------------------------------------------------------------*/
+
 @media only screen and (min-width: 768px) {
-   
+
     .welcome {
+        display: grid;
         display: grid;
         grid-area: social;
 
 
     }
     #featured img {
-    width: 500px
+        width: 500px
     }
-    
-    #featured-heading{
+
+    #featured-heading {
         display: none;
     }
 
@@ -461,7 +672,7 @@ h1 {
     }
     h3 {
         color: white;
-        font-size:1em;
+        font-size: 1em;
         text-transform: uppercase;
     }
     #featured {
@@ -469,6 +680,7 @@ h1 {
     }
 
     .main {
+        text-align: center;
         display: grid;
         grid-template-columns: 33% 1fr;
         grid-template-rows: 50% 1fr;
@@ -478,67 +690,77 @@ h1 {
     .hi {
         width: 50%;
     }
-    
-    
-/* SLIDES */
-    
+
+
+    /* SLIDES */
     .slides {
         display: none;
     }
-    
-    /* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-}
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-    .prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-    .dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-    
-    .active, .dot:hover {
-  background-color: #717171;
-}
-    /* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-    
-    @-webkit-keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
 
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-    
-    
-    
+    /* Next & previous buttons */
+    .prev,
+    .next {
+        cursor: pointer;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+    }
+    .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }
+    .prev:hover,
+    .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+    .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+    }
+
+    .active,
+    .dot:hover {
+        background-color: #717171;
+    }
+    /* Fading animation */
+    .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+
+    @-webkit-keyframes fade {
+        from {
+            opacity: .4
+        }
+        to {
+            opacity: 1
+        }
+    }
+
+    @keyframes fade {
+        from {
+            opacity: .4
+        }
+        to {
+            opacity: 1
+        }
+    }
+
+
+
 
 }
