@@ -152,7 +152,6 @@ table {
     }
     100% {
         opacity: 0;
-        height: 0;
     }
 }
 
@@ -170,7 +169,8 @@ h2,
 h3,
 h4,
 h5,
-h6 { 
+h6,
+a.logo { 
     font-family: sil;
 }
 
@@ -212,13 +212,19 @@ nav.dole {
     margin-top: 0;
 }
 
+nav li a {
+    text-decoration: none;
+}
+
 .logo {
     grid-area: logo;
+    font-size: 2rem;
+    text-decoration: none;
 }
 
 .logo.scaled {
     align-self: baseline;
-    margin: 1.5rem;
+    margin: 1.15rem;
 }
 
 .burger-menu a.xified {
@@ -254,8 +260,8 @@ nav li {
 
 .underlined {
     color: #0E6FBE;
+    text-decoration: underline;
     transition: 0.5s ease-in-out;
-    font-weight: bold;
 }
 
 .bar1, 
@@ -369,21 +375,12 @@ nav li {
     justify-content:flex-start;
     cursor: pointer;
     padding-top: 0.5em;
-    font-size: 1.5em;
-    
-    
+    font-size: 1.3em;
 }
 
 #sort li {
-    padding-right:1em;
-    display: inline-block;
-    border: 10px black;
-   
-    
-    
+    padding-right:0.5em;
 }
-
-
 
 .invisible {
     animation-name: show !important;
@@ -414,14 +411,17 @@ nav li {
 
 section#games-heading h1 {
     padding-top: 0.5em;
-   
-    font-size:3rem;
+    padding-bottom: 0.5em;
 }
 
 h1.h1-gamespage {
     font-size: 2rem;
     color: #0E6FBE;
     border-bottom: 3px solid #0E6FBE;
+}
+
+li.invisible {
+    display: none;
 }
 
 
@@ -437,10 +437,9 @@ h1.h1-gamespage {
 #game-title {
     color: #0E6FBE;
     font-size: 1.5em;
-    margin: 2rem 1rem ;
+    margin: 1rem;
     line-height:1;
     font-weight:bold;
-    padding-top:1em;
 }
 
 strong {
@@ -675,3 +674,195 @@ li em{
 /* END OF THE PHONE VERSION
 -----------------------------------------------------------------------------*/
 
+@media only screen and (min-width: 768px) {
+    
+    /* NAV
+    -----------------------------------------------------------------------------*/
+    
+    .header {
+        grid-template-columns: 5% 5% 1fr 5%;
+        grid-template-areas: 
+        ". logo nav .";
+    }
+    
+    .burger-menu {
+        display: none;
+    }
+    
+    nav {
+        margin-top: 0;
+    }
+    
+    nav li {
+        padding: 0;
+        padding-left: 1rem;
+        font-size: 1rem;
+    }
+    
+    nav li a:hover {
+        text-decoration: underline;
+    }
+    
+    #actual-nav {
+        flex-flow: row nowrap;
+    }
+    
+    #actual-nav li:first-of-type {
+        display: none;
+    }
+    
+    #main-nav {
+        justify-self: end;
+    }
+    
+    
+    /* GAMES PAGE SPECIFIC
+    -----------------------------------------------------------------------------*/
+    
+    #game-tiles {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-gap: 1rem;
+        grid-row-gap: 0.5rem;
+    }
+    
+    li.phone {
+        display: none;
+    }
+    
+    
+    /* GENERAL REUSABLE
+    -----------------------------------------------------------------------------*/
+    
+    body {
+       margin-top: 41px;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    .welcome {
+        display: grid;
+        display: grid;
+        grid-area: social;
+
+
+    }
+    #featured img {
+        width: 500px
+    }
+
+    #featured-heading {
+        display: none;
+    }
+
+    footer,
+    #community {
+        clear: left;
+
+    }
+    #community {
+        grid-area: community;
+        background: #0E6FBE;
+
+    }
+    h3 {
+        color: white;
+        font-size: 1em;
+        text-transform: uppercase;
+    }
+    #featured {
+        grid-area: featured;
+    }
+
+    .main {
+        text-align: center;
+        display: grid;
+        grid-template-columns: 33% 1fr;
+        grid-template-rows: 50% 1fr;
+        grid-template-areas: "social featured" "community featured";
+
+    }
+    .hi {
+        width: 50%;
+    }
+
+
+    /* SLIDES */
+    .slides {
+        display: none;
+    }
+
+    /* Next & previous buttons */
+    .prev,
+    .next {
+        cursor: pointer;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+    }
+    .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }
+    .prev:hover,
+    .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+    .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+    }
+
+    .active,
+    .dot:hover {
+        background-color: #717171;
+    }
+    /* Fading animation */
+    .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+
+    @-webkit-keyframes fade {
+        from {
+            opacity: .4
+        }
+        to {
+            opacity: 1
+        }
+    }
+
+    @keyframes fade {
+        from {
+            opacity: .4
+        }
+        to {
+            opacity: 1
+        }
+    }
+
+
+
+
+}
