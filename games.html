@@ -18,7 +18,9 @@
     <div class="wrapper">
 
         <header class="header">
-            <a href="index.html" class="logo">logo</a>
+            <a href="index.html" class="logo">
+                S&S
+            </a>
             
             <div class="burger-menu">
                 <a href="#main-nav" id="access-nav" class="access-aid">
@@ -49,7 +51,7 @@
                     </ul>
                 </section>
                 <section id="games-list">
-                    <ul>
+                    <ul id="game-tiles">
                         <li class="pc"> <a href=""> <img src="images/featured/war-girl.png" alt="War Girl " class="game-picture" ></a>
                         </li>
                         <li class="pc"> <a href="gamepage.html"> <img src="images/featured/khimera.png" alt="Khimera" class="game-picture" ></a>
@@ -109,63 +111,6 @@
 </body>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-
-<script>
-$(document).ready(function() {
-        
-    const PC = $(".pc"),
-          ARCADE = $(".arcade"),
-          SELALL = $("#all"),
-          SELPC = $("#pc"),
-          SELARCADE = $("#arcade");
-        
-    $(".burger-menu").click(function(){
-        $("#main-nav").toggleClass("dole",250);
-        $(".header").toggleClass("dole");
-        $(".burger-menu a").toggleClass("xified");
-        $(".logo").toggleClass("scaled",500);
-    });
-
-    $(SELALL).on('click', function () {
-        PC.removeClass("invisible");
-        ARCADE.removeClass("invisible");
-        PC.addClass("visible");
-        ARCADE.addClass("visible");
-        SELPC.removeClass("underlined");
-        SELARCADE.removeClass("underlined");
-        SELALL.addClass("underlined");
-    });
-        
-    $(SELPC).on('click', function () {
-        PC.removeClass("invisible");
-        ARCADE.addClass("invisible");
-        PC.addClass("visible");
-        SELPC.addClass("underlined");
-        SELARCADE.removeClass("underlined");
-        SELALL.removeClass("underlined");
-    });
-        
-    $(SELARCADE).on('click', function () {
-        PC.addClass("invisible");
-        ARCADE.removeClass("invisible");
-        ARCADE.addClass("visible");
-        SELPC.removeClass("underlined");
-        SELARCADE.addClass("underlined");
-        SELALL.removeClass("underlined");
-    });
-
-    var lastScrollTop = 0;
-
-    $(window).on("scroll", function(){
-        var st = $(this).scrollTop()
-        if (st > lastScrollTop){
-            $(".header").css("transform", "translateY(-100%)");
-        } else {
-            $(".header").css("transform", "none");
-        }
-        lastScrollTop = st;
-    });
-
-});
-</script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/script.js"></script>
 </html>

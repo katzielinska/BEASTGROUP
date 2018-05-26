@@ -152,7 +152,6 @@ table {
     }
     100% {
         opacity: 0;
-        height: 0;
     }
 }
 
@@ -170,7 +169,8 @@ h2,
 h3,
 h4,
 h5,
-h6 { 
+h6,
+a.logo { 
     font-family: sil;
 }
 
@@ -212,13 +212,19 @@ nav.dole {
     margin-top: 0;
 }
 
+nav li a {
+    text-decoration: none;
+}
+
 .logo {
     grid-area: logo;
+    font-size: 2rem;
+    text-decoration: none;
 }
 
 .logo.scaled {
     align-self: baseline;
-    margin: 1.5rem;
+    margin: 1.15rem;
 }
 
 .burger-menu a.xified {
@@ -403,6 +409,10 @@ h1.h1-gamespage {
     font-size: 2rem;
     color: #0E6FBE;
     border-bottom: 3px solid #0E6FBE;
+}
+
+li.invisible {
+    display: none;
 }
 
 
@@ -669,10 +679,6 @@ li em{
         font-size: 1rem;
     }
     
-    nav li a {
-        text-decoration: none;
-    }
-    
     nav li a:hover {
         text-decoration: underline;
     }
@@ -690,11 +696,22 @@ li em{
     }
     
     
+    /* GAMES PAGE SPECIFIC
+    -----------------------------------------------------------------------------*/
+    
+    #game-tiles {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1rem;
+        grid-row-gap: 0.5rem;
+    }
+    
+    
     /* GENERAL REUSABLE
     -----------------------------------------------------------------------------*/
     
     body {
-       margin-top: 21px;
+       margin-top: 41px;
     }
     
     
