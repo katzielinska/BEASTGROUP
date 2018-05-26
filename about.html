@@ -18,12 +18,25 @@
     <div class="wrapper">
 
         <header class="header">
-            <nav> <a href="index.html" class="logo">logo</a>
-                <img src="images/icons/menu.svg" alt="burger menu" class="burger-menu"></nav>
+            <div class="burger-menu">
+                <a href="#main-nav" id="access-nav" class="access-aid">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </a>
+            </div>
+            
+            <nav id="main-nav">
+                <ul id="actual-nav">
+                    <li><a href="">Home</a></li>
+                    <li><a href="">News</a></li>
+                    <li><a href="">About Us</a></li>
+                </ul>
+            </nav>
         </header>
 
 
-        <main class="content">
+        <main>
 
 
             <section id="about">
@@ -36,7 +49,7 @@
                     If you’re a creator looking for like minded people, you should check out our discord group, we’re always online and hanging out.</p>
 
 
-                <div class="linebreak"></div>
+            
 
                 <h2>S&amp;S Staff</h2>
                 
@@ -53,12 +66,13 @@
                             <li><em>Mandew vs the Upside Down Machine</em> - Program, Backgrounds &amp; Design</li>
                         </ul>
                     </div>
+                    
                     <div class="creatordescription">
                         <h4>Founder, Programmer &amp; Design Lead</h4>
-                        <p>"I'm the big boss! I've been making video games since middle school. My hobbies include video games, carpentry, cosplay and collecting things. With my passion for video games and training in business administration and management, I hope to make S&amp;S a developer that delivers quality content while also being a positive role model for young developers everywhere. My favorite video game is StarTropics and my favorite movie is Speed Racer.</p>
+                      <!--  <p>"I'm the big boss! I've been making video games since middle school. My hobbies include video games, carpentry, cosplay and collecting things. With my passion for video games and training in business administration and management, I hope to make S&amp;S a developer that delivers quality content while also being a positive role model for young developers everywhere. My favorite video game is StarTropics and my favorite movie is Speed Racer.</p>
                         <p>
                             My design philosophy is to make what you want to play, so if you like my games that means we must have similar tastes!"
-                        </p>
+                        </p>--->
                     </div>
                 </div>
 
@@ -82,13 +96,13 @@
                     </div>
                     <div class="creatordescription">
                         <h4>Planning &amp; Social Media Manager</h4>
-                        <p>"I'm a nursing major who just loves videogames! I work part-time and go to school fulltime. Having a pretty busy life didn't stop me from at least trying to pursue a few minor aspects in game development with my friend of about 10 years Syax, as we started on Mandew vs UDM. I did some character and environment design work on that game, and as the projects went one I played more of a support role brainstorming and assisting in design ideas and gameplay mechanic suggestions. </p>
+                      <!--  <p>"I'm a nursing major who just loves videogames! I work part-time and go to school fulltime. Having a pretty busy life didn't stop me from at least trying to pursue a few minor aspects in game development with my friend of about 10 years Syax, as we started on Mandew vs UDM. I did some character and environment design work on that game, and as the projects went one I played more of a support role brainstorming and assisting in design ideas and gameplay mechanic suggestions. </p>
 <p>
 I took on the role of trying to connect with fans via twitter and other platforms such as Youtube and Deviantart in order to express a more tight nit dev-to-client environment with those enjoying Khimera: DAMG after its release on Steam. Hoping S&S grows further and with it bring more opportunity for me to grow! (WOAH)"
-                        </p>
+                        </p>--->
                     </div>
                 </div>
-                 
+                 <div class="linebreak"></div>
                 <div class="creator">
                     <img class="creatorpic" src="images/bobhood.png">
 
@@ -104,11 +118,11 @@ I took on the role of trying to connect with fans via twitter and other platform
                     </div>
                     <div class="creatordescription">
                         <h4>Shower Time Development</h4>
-                        <p>“Hi, I like video games. I work retail part time and make video games with my spare energy. Years ago, I made Ice Demon as an experiement to gauge my potential in game development. Now, with more interest in this hobby, I am working on Throneless in hopes of making money off of it and making my life a bit easier. More importantly, I hope to develop quality video games that make people happy. I am currently partnered with S&S which has been a big help in growing as a developer, and hopefully my products will help them grow as well. My favorite game is Kirby Superstar.”</p>
-                        
+                       <!-- <p>“Hi, I like video games. I work retail part time and make video games with my spare energy. Years ago, I made Ice Demon as an experiement to gauge my potential in game development. Now, with more interest in this hobby, I am working on Throneless in hopes of making money off of it and making my life a bit easier. More importantly, I hope to develop quality video games that make people happy. I am currently partnered with S&S which has been a big help in growing as a developer, and hopefully my products will help them grow as well. My favorite game is Kirby Superstar.”</p>
+                        -->
                     </div>
                 </div>
-                 
+                 <div class="linebreak"></div>
                 <div class="creator">
                     <img class="creatorpic" src="images/buttington.png">
 
@@ -123,10 +137,11 @@ I took on the role of trying to connect with fans via twitter and other platform
                     </div>
                     <div class="creatordescription">
                         <h4> Art &amp; Design Creator </h4>
-                        <p>“I spend a lot of time drawing, playin video games and petting cats. My favorite thing to draw would have to be character designs, I love any sort of concept art. With video games I love anything to do with exploring, which means of course my favorite game is Oblivion. It’s only the best game ever. Speaking of best things ever Labyrinth is my favorite movie and my entire life wow but nothing will ever top my cats. My cats are what I live for, I love them”</p>
+                      <!---  <p>“I spend a lot of time drawing, playin video games and petting cats. My favorite thing to draw would have to be character designs, I love any sort of concept art. With video games I love anything to do with exploring, which means of course my favorite game is Oblivion. It’s only the best game ever. Speaking of best things ever Labyrinth is my favorite movie and my entire life wow but nothing will ever top my cats. My cats are what I live for, I love them”</p> --->
                         
                     </div>
                 </div>
+                 
 
             </section>
 
@@ -147,4 +162,7 @@ I took on the role of trying to connect with fans via twitter and other platform
     <!-- .wrapper -->
 
 </body>
+    <script src="js/jquery-3.3.1.min.js"></script>
+     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/js.js"></script>
 </html>

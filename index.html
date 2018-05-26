@@ -19,12 +19,29 @@
     <div class="wrapper">
 
         <header class="header">
-            <nav> <a href="index.html" class="logo">logo</a>
-                <img src="images/icons/menu.svg" alt="burger menu" class="burger-menu"></nav>
+             <a href="index.html" class="logo">logo</a>
+               
+             <div class="burger-menu">
+                <a href="#main-nav" id="access-nav" class="access-aid">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </a>
+            </div>
+            
+            <nav id="main-nav">
+                <ul id="actual-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="games.html">Games</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </nav>
         </header>
 
+        
 
-        <main class="content">
+
+        <main>
 
             <div class="main">
                 <section class="welcome">
@@ -37,11 +54,11 @@
                 <section id="featured">
                     <h3 id="featured-heading">Featured Games</h3>
                     <ul>
-                        <li class="slides fade"> <a href=""> <img src="images/featured/feature-1.png" alt="War Girl featured picture" class="featured" id="first"></a>
+                        <li class="slides fade"> <a href=""> <img src="images/featured/war-girl.png" alt="War Girl featured picture" class="featured" id="first"></a>
                         </li>
-                        <li class="slides fade"> <a href=""> <img src="images/featured/feature-3.png" alt="Vista Quest featured picture" class="featured"></a>
+                        <li class="slides fade"> <a href=""> <img src="images/featured/vista-quest-pocket.png" alt="Vista Quest featured picture" class="featured"></a>
                         </li>
-                        <li class="slides fade"> <a href=""> <img src="images/featured/feature-2.png" alt="Khimera featured picture" class="featured"></a>
+                        <li class="slides fade"> <a href=""> <img src="images/featured/khimera.png" alt="Khimera featured picture" class="featured"></a>
                         </li>
                     </ul>
                     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -57,11 +74,11 @@
                 <section id="community">
                     <h3>Join our community!</h3>
                     <ul id="community-icons">
-                        <li> <a href="https://twitter.com/suitsnsandals"> <img src="images/icons/twitter%20icon%20.png" alt="twitter icon" class="community-icons"> </a>
+                        <li> <a href="https://twitter.com/suitsnsandals"> <img src="images/icons/twitter-logo.svg" alt="twitter icon" class="community-icons"> </a>
                         </li>
-                        <li> <a href="https://discordapp.com/invite/xAz94jK"> <img src="images/icons/discordicon.png" alt="discord icon" class="community-icons" id="discord"> </a>
+                        <li> <a href="https://discordapp.com/invite/xAz94jK"> <img src="images/icons/Discord-Logo.svg" alt="discord icon" class="community-icons" id="discord"> </a>
                         </li>
-                        <li> <a href="https://steamcommunity.com/groups/suitsandsandals"> <img src="images/icons/steam%20icon.png" alt="steam icon" class="community-icons"> </a>
+                        <li> <a href="https://steamcommunity.com/groups/suitsandsandals"> <img src="images/icons/steam2.svg" alt="steam icon" class="community-icons"> </a>
                         </li>
                     </ul>
                 </section>
@@ -70,8 +87,20 @@
         <!-- .content -->
 
         <footer class="footer">
-            <p>Say hi! <a href="mailto:">Contact email</a></p>
+             
+            <div>
 
+            <a href="https://twitter.com/suitsnsandals"> <img src="images/icons/twitter%20icon%20white.png" alt="twitter icon" class="icons-small"> </a>
+
+
+            <a href="https://discordapp.com/invite/xAz94jK"> <img src="images/icons/discordiconwhite.png" alt="discord icon" class="icons-small" > </a>
+
+            <a href="https://steamcommunity.com/groups/suitsandsandals"> <img src="images/icons/whiteiconsteam.png" alt="steam icon" class="icons-small"> </a>
+              
+            </div>
+
+            <small> Copyright Suits and Sandals 2018 <br>
+                Founded June 16, 2010 </small>
         </footer>
         <!-- .footer -->
 
@@ -79,4 +108,40 @@
     <!-- .wrapper -->
 
 </body>
+    
+<script src="js/jquery-3.3.1.min.js"></script>
+     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/js.js"></script>
+<script>
+if ($(window).width() > 768) {
+   
+var slideIndex = 1;
+showSlides(slideIndex);
+setInterval(function(){ showSlides(++slideIndex); }, 3000);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("slides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+}
+</script>
 </html>

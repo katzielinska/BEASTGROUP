@@ -18,12 +18,25 @@
     <div class="wrapper">
 
         <header class="header">
-            <nav> <a href="index.html" class="logo">logo</a>
-                <img src="images/icons/menu.svg" alt="burger menu" class="burger-menu"></nav>
+            <div class="burger-menu">
+                <a href="#main-nav" id="access-nav" class="access-aid">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </a>
+            </div>
+            
+            <nav id="main-nav">
+                <ul id="actual-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="games.html">Games</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </nav>
         </header>
 
 
-        <main class="content">
+        <main>
 
 
             <section id="game">
@@ -78,4 +91,7 @@
     <!-- .wrapper -->
 
 </body>
+    <script src="js/jquery-3.3.1.min.js"></script>
+     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/js.js";></script>
 </html>
