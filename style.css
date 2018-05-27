@@ -160,7 +160,7 @@ a {
 }
 
 body {
-    margin-top: 71px;
+    margin-top: 73px;
     font-family: 'Sintony', sans-serif;
 }
 
@@ -529,6 +529,7 @@ p a {
     width: 90%;
 }
 
+
 /* ABOUT PAGE SPECIFIC
 -----------------------------------------------------------------------------*/
 
@@ -536,17 +537,15 @@ p a {
     color: #3d3d3d;
     text-align: left;
     font-family: sintony;
-
 }
 
 #aboutheading {
     color: #0E6FBE;
     font-size: 3rem;
     margin: 1rem;
-    padding-top:0.5em;
+    padding-top: 0.5em;
     font-weight: bold;
     border-bottom: 3px solid #0E6FBE;
-
 }
 
 #about h2 {
@@ -558,39 +557,40 @@ p a {
 .creator {
     display: grid;
     grid-template-columns: 40% 1fr;
-    grid-template-rows: auto1fr;
-    grid-template-areas: 'pic name' 'description description';
-
+    grid-template-rows: auto 1fr;
+    grid-template-areas: 
+        'pic name' 
+        'description description';
 }
 
-#about p{
-    margin:1rem;
+#about p {
+    margin: 1rem;
 }
 
-.creatorname{
+.creatorname {
     margin: 0 1rem;
-    font-size:1.55em;
-    font-weight:bold;
-    font-family:sintony;
+    font-size: 1.55em;
+    font-weight: bold;
+    font-family: sintony;
 }
-.creatorintro ul{
-    font-size:0.8em;
+.creatorintro ul {
+    font-size: 0.8em;
 }
-#about li{
-    margin-left:1rem;
+#about li {
+    margin-left: 1rem;
     align-self: flex-start;
-    font-size:1rem;
+    font-size: 1rem;
 }
-li em{
-    font-weight:bold;
+li em {
+    font-weight: bold;
 }
 .creatordescription {
     grid-area: description;
 
 }
 
-.creatordescription h4{
-    margin:1rem;
+.creatordescription h4 {
+    margin: 1rem;
     font-weight: bold;
     text-align: center;
     font-size: 1.3rem;
@@ -603,8 +603,16 @@ li em{
 
 .creatorpic {
     grid-area: pic;
+    margin-left: 1rem;
+}
 
-    margin-left:1rem;
+.creator-text { 
+    display:none;
+}
+
+
+.kupa {
+    opacity: 0;
 }
 
 
@@ -750,10 +758,6 @@ li em{
 
     /* GENERAL REUSABLE
     -----------------------------------------------------------------------------*/
-
-    body {
-        margin-top: 41px;
-    }
     
     .wrapper {
         min-height: 100vh;
@@ -787,27 +791,37 @@ li em{
     
     #dots {
         grid-area: dots;
+        text-align: center;
     }
     
     #featured {
         grid-area: featured;
+        margin: 0;
     }
     
     #community {
         grid-area: community;
         background: #0E6FBE;
+        text-align: center;
     }
     
-    #home-page-nav {
-        
+    #subpage-feature {
+        grid-area: subpage;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
     }
     
-    header#home-page-nav {
-        background: linear-gradient(to right, #0E6FBE, #fff 50%);
+    section#subpage-feature article {
+        text-align: center;
     }
     
-    header#home-page-nav a {
-        color: #0E6FBE;
+    .filler {
+        width: 33%;
+    }
+    
+    .featured {
+        margin: 0;
     }
     
     ul.phone {
@@ -821,12 +835,6 @@ li em{
     #featured-heading {
         display: none;
     }
-
-    footer,
-    #community {
-        clear: left;
-
-    }
     
     section#community h3 {
         color: white;
@@ -835,21 +843,23 @@ li em{
     }
 
     .main {
-        text-align: center;
         display: grid;
         grid-template-columns: 33% 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-rows: auto auto 5% 1fr;
         grid-template-areas: 
-            "welcome featured" 
-            "community dots";
-
+            "welcome featured"
+            "community featured"
+            "community dots"
+            "subpage subpage";
     }
+    
     .hi {
         width: 50%;
     }
 
 
     /* SLIDES */
+    
     .slides {
         display: none;
     }
@@ -918,6 +928,56 @@ li em{
     }
 
 
-
+/* ABOUT PAGE SPECIFIC*/ 
+    
+    .creator-text { 
+        display: block;
+    }
+    
+    .profiles {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+            "SYX MegaFire"
+            "Bob Buttington";    
+    }
+    
+    .linebreak {
+        display: none;
+    }
+    
+    #creator1{
+        grid-area: SYX;
+    }
+        
+        
+    #creator2  {
+        grid-area:  MegaFire;
+    }
+    
+    #creator3 {
+        grid-area: Bob;
+    }
+    #creator4 {
+        grid-area: Buttington;
+    }
+    .h4-first,
+    .h4-second {
+        padding-top: rem}
+    .h4-second {
+        padding-top: rem}
+    
+    .h4-third,
+    .h4-fourth{padding-top: rem;}
+    
+    #creator3,
+    #creator4 {
+        padding-top: 2.1rem;}
+    #creatordescription4 {
+        padding-bottom: 4.5rem;}
+    .creatorpic {height: 13rem;}
+        
+     }
 
 }
