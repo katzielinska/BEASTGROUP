@@ -1,4 +1,4 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -152,7 +152,6 @@ table {
     }
     100% {
         opacity: 0;
-        height: 0;
     }
 }
 
@@ -170,7 +169,7 @@ h2,
 h3,
 h4,
 h5,
-h6 { 
+h6 {
     font-family: sil;
 }
 
@@ -183,7 +182,7 @@ h6 {
     display: grid;
     grid-template-columns: 5% 5% 1fr 5% 5%;
     grid-auto-rows: auto;
-    grid-template-areas: 
+    grid-template-areas:
         ". logo nav burger .";
     align-items: center;
     transition: 0.5s ease;
@@ -212,13 +211,21 @@ nav.dole {
     margin-top: 0;
 }
 
+nav li a {
+    text-decoration: none;
+}
+
 .logo {
     grid-area: logo;
+    font-size: 2rem;
+    text-decoration: none;
+    margin: 1rem;
+    color: #fff !important;
 }
 
 .logo.scaled {
     align-self: baseline;
-    margin: 1.5rem;
+    margin: 1.2rem;
 }
 
 .burger-menu a.xified {
@@ -254,12 +261,12 @@ nav li {
 
 .underlined {
     color: #0E6FBE;
+    text-decoration: underline;
     transition: 0.5s ease-in-out;
-    font-weight: bold;
 }
 
-.bar1, 
-.bar2, 
+.bar1,
+.bar2,
 .bar3 {
     height: 5px;
     background-color: #fff;
@@ -271,7 +278,7 @@ nav li {
     transform: rotate(-45deg) translate(-9px, 7px);
 }
 
-.xified .bar2 { 
+.xified .bar2 {
     opacity: 0;
 }
 
@@ -288,60 +295,62 @@ nav li {
     color: white;
     height: 60vh;
     display: grid;
-    grid-template-columns: 50px auto 50px;
-    grid-template-rows: 50%;
-    grid-row-gap:10px;
+    grid-template-columns: 50px 1fr 50px;
+    grid-template-rows: 1fr 1fr;
+    grid-row-gap: 10px;
     text-align: left;
 }
 
 .heading {
     grid-column-start: 2;
-    align-self: flex-start;
+    align-self: start;
     font-size: 1.5rem;
 }
 
 #featured-heading {
     font-size: 2em;
     color: #0E6FBE;
-    padding-bottom: 1.5rem;
+    padding-bottom: 1rem;
 }
 
 .hi {
     width: 40vw;
     grid-column-start: 2;
-    align-self: flex-end;
+    align-self: end;
 }
 
 #community h3 {
-
-    font-size:2rem;
+    font-size: 2rem;
     text-align: center;
-    color:#0E6FBE;
+    color: #0E6FBE;
 }
 
 #featured {
     margin-top: 2rem;
-    border-radius: 2px;
     text-align: center;
 }
 
-.featured{
-    width:90%;
-    margin:1rem auto;
+.featured {
+    width: 90%;
+    margin: 1rem auto;
 }
 
-#community-icons li {
-    display: inline-block;
-    
-}
+.community-icons li {
+    display: inline;
 
-#community-icons {
-    margin: 1em 0em 2em 0em;
-    display:flex;
-    justify-content: space-around;
 }
 
 .community-icons {
+    margin: 1em 0em 2em 0em;
+    display: flex;
+    justify-content: space-around;
+}
+
+ul.computer {
+    display: none;
+}
+
+.community-icon {
     width: 60px;
 }
 
@@ -357,10 +366,9 @@ nav li {
     display: grid;
     grid-template-columns: 5% 1fr 5%;
     grid-template-rows: auto;
-    grid-template-areas: 
+    grid-template-areas:
         ". text ."
-        ". games ."
-        "footer footer footer";
+        ". games .";
 }
 
 #sort {
@@ -369,21 +377,12 @@ nav li {
     justify-content:flex-start;
     cursor: pointer;
     padding-top: 0.5em;
-    font-size: 1.5em;
-    
-    
+    font-size: 1.3em;
 }
 
 #sort li {
-    padding-right:1em;
-    display: inline-block;
-    border: 10px black;
-   
-    
-    
+    padding-right:0.5em;
 }
-
-
 
 .invisible {
     animation-name: show !important;
@@ -414,14 +413,21 @@ nav li {
 
 section#games-heading h1 {
     padding-top: 0.5em;
-   
-    font-size:3rem;
+    padding-bottom: 0.5em;
 }
 
 h1.h1-gamespage {
     font-size: 2rem;
     color: #0E6FBE;
     border-bottom: 3px solid #0E6FBE;
+}
+
+li.invisible {
+    display: none !important;
+}
+
+li.computer {
+    display: none;
 }
 
 
@@ -437,10 +443,9 @@ h1.h1-gamespage {
 #game-title {
     color: #0E6FBE;
     font-size: 1.5em;
-    margin: 2rem 1rem ;
+    margin: 1rem;
     line-height:1;
     font-weight:bold;
-    padding-top:1em;
 }
 
 strong {
@@ -555,7 +560,7 @@ p a {
     grid-template-columns: 40% 1fr;
     grid-template-rows: auto1fr;
     grid-template-areas: 'pic name' 'description description';
-    
+
 }
 
 #about p{
@@ -581,7 +586,7 @@ li em{
 }
 .creatordescription {
     grid-area: description;
-        
+
 }
 
 .creatordescription h4{
@@ -598,7 +603,7 @@ li em{
 
 .creatorpic {
     grid-area: pic;
-    
+
     margin-left:1rem;
 }
 
@@ -610,14 +615,14 @@ li em{
     color:3d3d3d;
     width:90%;
     margin:0 auto;
- 
+
 }
 #newsheading{
     margin: 1rem;
     font-family: sintony;
     font-size:2em;
     color:#0E6FBE;
-  font-weight: bold;  
+  font-weight: bold;
 }
 
 .newsbutton{
@@ -629,20 +634,20 @@ li em{
     font-size:2em;
     margin: 1rem 0 0;
     border:none;
-    
-    
+
+
 }
 .activebutton{
     background-color:darkgrey;
-    
+
 }
 
 #buttons{
     display:grid;
     grid-template-columns: 1fr 1fr;
     margin:0;
-    
-    
+
+
 }
 
 
@@ -656,7 +661,6 @@ li em{
 
 .footer {
     background: #0E6FBE;
-    grid-area: footer;
     color: #ffffff;
     font-size: 0.6rem;
     text-align: center;
@@ -675,3 +679,245 @@ li em{
 /* END OF THE PHONE VERSION
 -----------------------------------------------------------------------------*/
 
+@media only screen and (min-width: 768px) {
+
+    /* NAV
+    -----------------------------------------------------------------------------*/
+
+    .header {
+        grid-template-columns: 5% 5% 1fr 5%;
+        grid-template-areas:
+        ". logo nav .";
+        grid-area: header;
+    }
+
+    .burger-menu {
+        display: none;
+    }
+
+    nav {
+        margin-top: 0;
+    }
+
+    nav li {
+        padding: 0;
+        padding-left: 1rem;
+        font-size: 1rem;
+    }
+
+    nav li a:hover {
+        text-decoration: underline;
+    }
+
+    #actual-nav {
+        flex-flow: row nowrap;
+    }
+
+    #actual-nav li:first-of-type {
+        display: none;
+    }
+
+    #main-nav {
+        justify-self: end;
+    }
+
+
+    /* GAMES PAGE SPECIFIC
+    -----------------------------------------------------------------------------*/
+
+    #game-tiles {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-gap: 1rem;
+        grid-row-gap: 0.5rem;
+    }
+
+    li.phone {
+        display: none;
+    }
+    
+    li.computer {
+        display: block;
+        box-shadow: 4px 4px rgba(0, 0, 0, 0.23);
+    }
+    
+    li.computer:hover {
+        transform: translateY(-1%) translateX(-1%);
+        box-shadow: 6px 6px rgba(0, 0, 0, 0.16);
+        transition: 0.3s ease;
+    }
+
+
+    /* GENERAL REUSABLE
+    -----------------------------------------------------------------------------*/
+
+    body {
+        margin-top: 41px;
+    }
+    
+    .wrapper {
+        min-height: 100vh;
+        display: grid;
+        grid-template-rows: 10% 1fr 10%;
+        grid-template-areas: 
+            "header"
+            "main"
+            "footer";
+    }
+    
+    .content {
+        grid-area: main;
+    }
+    
+    .main {
+        grid-area: main;
+    }
+    
+    .footer {
+        grid-area: footer;
+    }
+
+
+    /* MAIN PAGE SPECIFIC
+    -----------------------------------------------------------------------------*/
+
+    .welcome {
+        grid-area: welcome;
+    }
+    
+    #dots {
+        grid-area: dots;
+    }
+    
+    #featured {
+        grid-area: featured;
+    }
+    
+    #community {
+        grid-area: community;
+        background: #0E6FBE;
+    }
+    
+    #home-page-nav {
+        
+    }
+    
+    header#home-page-nav {
+        background: linear-gradient(to right, #0E6FBE, #fff 50%);
+    }
+    
+    header#home-page-nav a {
+        color: #0E6FBE;
+    }
+    
+    ul.phone {
+        display: none;
+    }
+    
+    ul.computer {
+        display: block;
+    }
+
+    #featured-heading {
+        display: none;
+    }
+
+    footer,
+    #community {
+        clear: left;
+
+    }
+    
+    section#community h3 {
+        color: white;
+        font-size: 1em;
+        text-transform: uppercase;
+    }
+
+    .main {
+        text-align: center;
+        display: grid;
+        grid-template-columns: 33% 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: 
+            "welcome featured" 
+            "community dots";
+
+    }
+    .hi {
+        width: 50%;
+    }
+
+
+    /* SLIDES */
+    .slides {
+        display: none;
+    }
+
+    /* Next & previous buttons */
+    .prev,
+    .next {
+        cursor: pointer;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+    }
+    .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }
+    .prev:hover,
+    .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+    .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+    }
+
+    .active,
+    .dot:hover {
+        background-color: #717171;
+    }
+    /* Fading animation */
+    .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+
+    @-webkit-keyframes fade {
+        from {
+            opacity: .4
+        }
+        to {
+            opacity: 1
+        }
+    }
+
+    @keyframes fade {
+        from {
+            opacity: .4
+        }
+        to {
+            opacity: 1
+        }
+    }
+
+
+
+
+}
