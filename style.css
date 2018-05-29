@@ -169,7 +169,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+#hi {
     font-family: sil;
 }
 
@@ -213,6 +214,7 @@ nav.dole {
 
 nav li a {
     text-decoration: none;
+    text-transform: uppercase;
 }
 
 .logo {
@@ -220,6 +222,7 @@ nav li a {
     font-size: 2rem;
     text-decoration: none;
     margin: 1rem;
+    margin-left: 0;
     color: #fff !important;
 }
 
@@ -297,7 +300,6 @@ nav li {
     display: grid;
     grid-template-columns: 50px 1fr 50px;
     grid-template-rows: 1fr 1fr;
-    grid-row-gap: 10px;
     text-align: left;
 }
 
@@ -313,8 +315,8 @@ nav li {
     padding-bottom: 1rem;
 }
 
-.hi {
-    width: 40vw;
+#hi {
+    font-size: 6rem;
     grid-column-start: 2;
     align-self: end;
 }
@@ -352,10 +354,6 @@ ul.computer {
 
 .community-icon {
     width: 60px;
-}
-
-#discord {
-    width: 90px;
 }
 
 
@@ -437,15 +435,16 @@ li.computer {
 #game {
     color: #3d3d3d;
     text-align: justify;
-    font-family: Sintony;
+    font-family: 'Sintony', sans-serif;
 }
 
 #game-title {
     color: #0E6FBE;
     font-size: 1.5em;
     margin: 1rem;
-    line-height:1;
-    font-weight:bold;
+    line-height: 1;
+    font-weight: bold;
+    text-align: left;
 }
 
 strong {
@@ -476,7 +475,6 @@ h2.h2-gamepage {
     background: #0E6FBE;
     height: 3px;
     margin: 1rem;
-
 }
 
 .specslist {
@@ -509,7 +507,7 @@ h2.h2-gamepage {
     grid-template-columns: 66% auto;
     text-decoration: none;
     text-align: center;
-    font-family: sintony;
+    font-family: 'Sintony', sans-serif;
     justify-items: center;
     align-items: center;
 }
@@ -526,9 +524,30 @@ p a {
 .gamegallery img {
     display: block;
     margin: 1rem auto;
-    width: 90%;
+    
 }
 
+.videoWrapper {
+        
+        grid-area: video;
+        position: relative;
+        padding-bottom: 56.25%;
+        /* 16:9 */
+        padding-top: 25px;
+        height: 0;
+        align-self: center;
+        margin:1rem;
+    }
+
+    .videoWrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        
+        
+    }
 
 /* ABOUT PAGE SPECIFIC
 -----------------------------------------------------------------------------*/
@@ -536,7 +555,8 @@ p a {
 #about {
     color: #3d3d3d;
     text-align: left;
-    font-family: sintony;
+    font-family: 'Sintony', sans-serif;
+
 }
 
 #aboutheading {
@@ -546,21 +566,21 @@ p a {
     padding-top: 0.5em;
     font-weight: bold;
     border-bottom: 3px solid #0E6FBE;
+
 }
 
 #about h2 {
     color: #0E6FBE;
-    font-size:2.5rem;
-    margin:1rem;
+    font-size: 2.5rem;
+    margin: 1rem;
 }
 
 .creator {
     display: grid;
     grid-template-columns: 40% 1fr;
     grid-template-rows: auto 1fr;
-    grid-template-areas: 
-        'pic name' 
-        'description description';
+    grid-template-areas: 'pic name' 'description description';
+
 }
 
 #about p {
@@ -571,19 +591,23 @@ p a {
     margin: 0 1rem;
     font-size: 1.55em;
     font-weight: bold;
-    font-family: sintony;
+    font-family: 'Sintony', sans-serif;
 }
+
 .creatorintro ul {
     font-size: 0.8em;
 }
+
 #about li {
     margin-left: 1rem;
     align-self: flex-start;
     font-size: 1rem;
 }
+
 li em {
     font-weight: bold;
 }
+
 .creatordescription {
     grid-area: description;
 
@@ -594,7 +618,7 @@ li em {
     font-weight: bold;
     text-align: center;
     font-size: 1.3rem;
-    font-family: sintony;
+    font-family: 'Sintony', sans-serif;
 }
 
 .creatorintro {
@@ -603,11 +627,14 @@ li em {
 
 .creatorpic {
     grid-area: pic;
+
     margin-left: 1rem;
+
 }
 
-.creator-text { 
-    display:none;
+
+.creator-text {
+    display: none;
 }
 
 
@@ -616,50 +643,57 @@ li em {
 }
 
 
+
+
+
+
+
 /* NEWS PAGE SPECIFIC
 -----------------------------------------------------------------------------*/
 
-#news{
-    color:3d3d3d;
-    width:90%;
-    margin:0 auto;
+#news {
+    color: #3d3d3d;
+    width: 90%;
+    margin: 0 auto;
 
 }
-#newsheading{
+
+#newsheading {
     margin: 1rem;
-    font-family: sintony;
-    font-size:2em;
-    color:#0E6FBE;
-  font-weight: bold;
-}
-
-.newsbutton{
-    background-color:whitesmoke;
-    width:100%;
-    height:50px;
-    font-family:Sintony;
+    font-family: 'Sintony', sans-serif;
+    font-size: 2em;
+    color: #0E6FBE;
     font-weight: bold;
-    font-size:2em;
+}
+
+.newsbutton {
+    background-color: whitesmoke;
+    width: 100%;
+    height: 50px;
+    font-family: 'Sintony', sans-serif;
+    font-weight: bold;
+    font-size: 2em;
     margin: 1rem 0 0;
-    border:none;
+    border: none;
 
 
 }
-.activebutton{
-    background-color:darkgrey;
+
+.activebutton {
+    background-color: darkgrey;
 
 }
 
-#buttons{
-    display:grid;
+#buttons {
+    display: grid;
     grid-template-columns: 1fr 1fr;
-    margin:0;
+    margin: 0;
 
 
 }
 
 
-#twitterfeed{
+#twitterfeed {
     border: black 2px;
 }
 
@@ -711,6 +745,7 @@ li em {
         padding: 0;
         padding-left: 1rem;
         font-size: 1rem;
+        
     }
 
     nav li a:hover {
@@ -767,6 +802,7 @@ li em {
             "header"
             "main"
             "footer";
+        overflow: hidden;
     }
     
     .content {
@@ -779,6 +815,20 @@ li em {
     
     .footer {
         grid-area: footer;
+        flex-flow: row-reverse nowrap;
+        justify-content: space-between;
+    }
+    
+    .footer small {
+        padding: 1rem
+    }
+    
+    .footer div {
+        padding: 1rem;
+    }
+    
+    .footer br {
+        display: none;
     }
 
 
@@ -787,6 +837,7 @@ li em {
 
     .welcome {
         grid-area: welcome;
+        height: auto;
     }
     
     #dots {
@@ -797,6 +848,15 @@ li em {
     #featured {
         grid-area: featured;
         margin: 0;
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "pic";
+    }
+    
+    section#featured ul {
+        grid-area: pic;
     }
     
     #community {
@@ -805,23 +865,13 @@ li em {
         text-align: center;
     }
     
-    #subpage-feature {
-        grid-area: subpage;
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-around;
-    }
-    
-    section#subpage-feature article {
-        text-align: center;
-    }
-    
-    .filler {
-        width: 33%;
+    #twitter {
+        display: none;
     }
     
     .featured {
         margin: 0;
+        width: 60%;
     }
     
     ul.phone {
@@ -844,17 +894,12 @@ li em {
 
     .main {
         display: grid;
-        grid-template-columns: 33% 1fr;
-        grid-template-rows: auto auto 5% 1fr;
+        grid-template-columns: 30% 1fr;
+        grid-template-rows: 70% 15% 15%;
         grid-template-areas: 
             "welcome featured"
             "community featured"
-            "community dots"
-            "subpage subpage";
-    }
-    
-    .hi {
-        width: 50%;
+            "community dots";
     }
 
 
@@ -865,27 +910,6 @@ li em {
     }
 
     /* Next & previous buttons */
-    .prev,
-    .next {
-        cursor: pointer;
-        top: 50%;
-        width: auto;
-        padding: 16px;
-        margin-top: -22px;
-        color: white;
-        font-weight: bold;
-        font-size: 18px;
-        transition: 0.6s ease;
-        border-radius: 0 3px 3px 0;
-    }
-    .next {
-        right: 0;
-        border-radius: 3px 0 0 3px;
-    }
-    .prev:hover,
-    .next:hover {
-        background-color: rgba(0, 0, 0, 0.8);
-    }
     .dot {
         cursor: pointer;
         height: 15px;
@@ -928,56 +952,147 @@ li em {
     }
 
 
-/* ABOUT PAGE SPECIFIC*/ 
-    
-    .creator-text { 
+    /* ABOUT PAGE SPECIFIC*/
+    .creator-text {
         display: block;
     }
-    
+
     .profiles {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
-        grid-template-areas: 
-            "SYX MegaFire"
-            "Bob Buttington";    
+        grid-template-areas: "SYX MegaFire" "Bob Buttington";
     }
-    
+
     .linebreak {
         display: none;
     }
-    
-    #creator1{
+
+    #creator1 {
         grid-area: SYX;
     }
-        
-        
-    #creator2  {
-        grid-area:  MegaFire;
+
+    #creator2 {
+        grid-area: MegaFire;
     }
-    
+
     #creator3 {
         grid-area: Bob;
     }
     #creator4 {
         grid-area: Buttington;
     }
-    .h4-first,
-    .h4-second {
-        padding-top: rem}
-    .h4-second {
-        padding-top: rem}
-    
-    .h4-third,
-    .h4-fourth{padding-top: rem;}
-    
-    #creator3,
-    #creator4 {
-        padding-top: 2.1rem;}
-    #creatordescription4 {
-        padding-bottom: 4.5rem;}
-    .creatorpic {height: 13rem;}
-        
-     }
 
+    #creator3 {
+        padding-top: 2.1rem;
+    }
+
+    #creator4 {
+        padding-top: 2.1rem;
+    }
+
+    #creatordescription4 {
+        padding-bottom: 4.5rem;
+    }
+
+    .creatorpic {
+        height: 13rem;
+    }
+
+
+    /*gamepage--------------------*/
+    #effin-grid {
+        display: grid;
+        grid-template-columns: 50px 1fr 50px 1fr 50px;
+        grid-template-rows: 1fr 1fr auto;
+        grid-template-areas: ". khimera . video" ". description . video" ". specs . steam";
+    }
+
+    h2.h2-gamepage{
+        margin-top: 0;
+    }
+    
+    #game-title {
+        grid-area: khimera;
+        font-size: 2em;
+        margin-bottom: 0;
+    }
+.videoWrapper {
+        margin:0rem;
+    }
+
+    
+
+    .hero-text {
+        grid-area: description;
+        
+    }
+
+    .text-game {
+        grid-area: specs;
+        align-self: flex-end;
+    }
+
+    #steamstore {
+        grid-area: steam;
+        align-self: flex-end;
+        width:100%;
+    }
+
+    #steamstore a {
+        grid-row-start: 4;
+    }
+
+    
+    .gamegallery{
+        display:flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        grid-row-start: 2;
+        grid-area: pictures;
+        
+    }
+    
+    .gallery{
+        margin-top: 3em;
+        display:grid;
+        grid-template-columns: 50px 1fr 50px;
+        grid-template-rows: auto auto auto auto auto;
+        grid-row-gap: 10px;
+        grid-template-areas: 
+        ". gallery ."
+        ". pictures ."
+        ". patchnotes ."
+        ". patchnotes2 ."
+        ". manual ."
+        ". download .";
+    }
+    
+    #galleryheading{
+        grid-area:gallery;
+        border-top: 3px solid #0E6FBE;
+        padding-top: 1rem;
+    }
+    
+    #patchnotes{
+        grid-area:patchnotes;
+        border-top: 3px solid #0E6FBE;
+        padding-top: 1rem;
+         
+    }
+    #patchnotes2{
+        grid-area:patchnotes2;
+    }
+    
+    #manual{
+        grid-area:manual;
+        border-top: 3px solid #0E6FBE;
+        padding-top: 1rem;
+        margin: 1rem;
+    }
+    
+    #download{
+        grid-area:download;
+        
+    }
 }

@@ -17,7 +17,11 @@
 <body>
     <div class="wrapper">
 
-        <header class="header">
+        <header class="header" id="home-page-nav">
+            <a href="index.html" class="logo">
+                <h1>S&S</h1>
+            </a>
+            
             <div class="burger-menu">
                 <a href="#main-nav" id="access-nav" class="access-aid">
                     <div class="bar1"></div>
@@ -40,38 +44,65 @@
 
 
             <section id="game">
-                <h1 id="game-title"><strong>Khimera</strong><br> Destroy all the monster girls</h1>
-                <iframe src="https://www.youtube.com/embed/8WbWmjQZSLc?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <article id="effin-grid">
 
-                <button id="steamstore"><a href="https://store.steampowered.com/app/467380/Khimera_Destroy_All_Monster_Girls/">get on steam now <img src="images/icons/steam.svg"></a></button>
-                <h2 class="h2-gamepage">A monsterous hero</h2>
-                <p class="p-gamepage">Part human, part oni, golem and harpy! The list goes on and on! Born in a lab, Chelshia the chimera is the world's first synthetic monster girl. When her monster inhabited island home is threatened by a band of looting pirates, she springs into action to save the day!</p>
-                <div class="linebreak"></div>
-                <h2 class="h2-gamepage">specs</h2>
-                <ul class="ul-gamepage">
-                    <li class="specslist"><span class="specsone">Release: </span>April 15, 2016</li>
-                    <li class="specslist"><span class="specsone">Downloads:</span> 24230</li>
-                    <li class="specslist"><span class="specsone">Current Version: </span>3.1</li>
-                    <li class="specslist"><span class="specsone">OS:</span>Windows Vista and up</li>
-                </ul>
+
+                    <h1 id="game-title">
+                        <strong>Khimera</strong><br> Destroy all the monster girls</h1>
+                    <div class="videoWrapper">
+                        <iframe class="video" src="https://www.youtube.com/embed/8WbWmjQZSLc?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    </div>
+                    <button id="steamstore"><a href="https://store.steampowered.com/app/467380/Khimera_Destroy_All_Monster_Girls/">get on steam now <img src="images/icons/steam-icon-white.png" alt="small-white-steam"></a></button>
+
+
+                    <div class="hero-text">
+                        <h2 class="h2-gamepage" id="h2-game">A monsterous hero</h2>
+                        <p class="p-gamepage">Part human, part oni, golem and harpy! The list goes on and on! Born in a lab, Chelshia the chimera is the world's first synthetic monster girl. When her monster inhabited island home is threatened by a band of looting pirates, she springs into action to save the day!</p>
+
+                    </div>
+
+
+
+
+
+                    <div class="linebreak"></div>
+
+                    <div class="text-game">
+                        <ul class="ul-gamepage">
+                            <li class="specslist"><span class="specsone">Release: </span>April 15, 2016</li>
+                            <li class="specslist"><span class="specsone">Downloads:</span> 24230</li>
+                            <li class="specslist"><span class="specsone">Current Version: </span>3.1</li>
+                            <li class="specslist"><span class="specsone">OS:</span>Windows Vista and up</li>
+                        </ul>
+                    </div>
+                </article>
 
                 <div class="linebreak"></div>
-                <h2 class="h2-gamepage">gallery</h2>
-                <div class="gamegallery">
-                    <img src="images/gallery/khimera-gallery-image-1.png">
-                    <img src="images/gallery/khimera-gallery-image-2.png">
-                    <img src="images/gallery/khimera-gallery-image-4.png">
+                
+                <div class="gallery">
+                    <h2 id="galleryheading" class="h2-gamepage">gallery</h2>
+                    <div class="gamegallery">
+                        <div class="gallerypic1"><img src="images/gallery/khimera-gallery-image-1.png"></div>
+                        <div class="gallerypic2"> <img src="images/gallery/khimera-gallery-image-2.png"></div>
+                        <div class="gallerypic3"><img src="images/gallery/khimera-gallery-image-4.png"></div>
+                    </div>
+
+                    <div class="linebreak"></div>
+
+
+                    <h2 id="patchnotes" class="h2-gamepage">patch notes</h2>
+                    <p class="p-gamepage" id="patchnotes2"> <a href="https://store.steampowered.com/news/?appids=467380">see on steam</a></p>
+                    <div class="linebreak"></div>
+                   
+                        
+                            <h2 id="manual" class="h2-gamepage">game manual</h2>
+                        
+                
+                    
+                    <div id="download">
+                        <p class="p-gamepage"> <a href>download pdf (25 mb size)</a></p>
+                    </div>
                 </div>
-
-                <div class="linebreak"></div>
-
-
-                <h2 class="h2-gamepage">patch notes</h2>
-                <p class="p-gamepage"> <a href="https://store.steampowered.com/news/?appids=467380">see on steam</a></p>
-                <div class="linebreak"></div>
-                <h2 class="h2-gamepage">game manual</h2>
-                <p class="p-gamepage"> <a href>download pdf (25 mb size)</a></p>
-
             </section>
 
 
@@ -80,10 +111,21 @@
 
         </main>
         <!-- .content -->
-
         <footer class="footer">
-            <p class="p-gamepage">Say hi! <a href="mailto:">Contact email</a></p>
 
+            <div>
+
+                <a href="https://twitter.com/suitsnsandals"> <img src="images/icons/twitter-icon-white.png" alt="twitter icon" class="icons-small"> </a>
+
+
+                <a href="https://discordapp.com/invite/xAz94jK"> <img src="images/icons/discord-icon-white.png" alt="discord icon" class="icons-small" > </a>
+
+                <a href="https://steamcommunity.com/groups/suitsandsandals"> <img src="images/icons/steam-icon-white.png" alt="steam icon" class="icons-small"> </a>
+
+            </div>
+
+            <small> Copyright Suits and Sandals 2018 <br>
+                Founded June 16, 2010 </small>
         </footer>
         <!-- .footer -->
 
@@ -91,7 +133,8 @@
     <!-- .wrapper -->
 
 </body>
-    <script src="js/jquery-3.3.1.min.js"></script>
-     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="js/js.js";></script>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="js/script.js"></script>
+
 </html>
