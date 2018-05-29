@@ -140,7 +140,9 @@ table {
 
 /* GENERAL, !REUSABLE!
 -----------------------------------------------------------------------------*/
-
+a{
+    text-decoration: none;
+}
 @font-face {
     font-family: sil;
     src: url(/assets/silom.woff);
@@ -356,13 +358,17 @@ ul.computer {
     width: 60px;
 }
 
+#discord{
+    width:80px;
+}
+
 
 /* GAMES PAGE SPECIFIC
 -----------------------------------------------------------------------------*/
 
 .content {
     display: grid;
-    grid-template-columns: 5% 1fr 5%;
+    grid-template-columns: 50px 1fr 50px;
     grid-template-rows: auto;
     grid-template-areas:
         ". text ."
@@ -374,7 +380,7 @@ ul.computer {
     flex-flow: row nowrap;
     justify-content:flex-start;
     cursor: pointer;
-    padding-top: 0.5em;
+    padding: 0.5em 0;
     font-size: 1.3em;
 }
 
@@ -411,7 +417,8 @@ ul.computer {
 
 section#games-heading h1 {
     padding-top: 0.5em;
-    padding-bottom: 0.5em;
+    font-size: 3em;
+    
 }
 
 h1.h1-gamespage {
@@ -489,28 +496,25 @@ h2.h2-gamepage {
 }
 
 #steamstore {
-    display: block;
+
     width: 80%;
     font-size: 1.2em;
     background-color: #1C1C1C;
-    border: none;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
     text-transform: uppercase;
     border-radius: 2px;
     margin: 2rem auto;
-
-
-}
-
-#steamstore a {
-    display: grid;
+     display: grid;
     grid-template-columns: 66% auto;
     text-decoration: none;
     text-align: center;
     font-family: 'Sintony', sans-serif;
     justify-items: center;
     align-items: center;
+
+
 }
+
 
 #steamstore img {
     width: 50px;
@@ -551,7 +555,49 @@ p a {
 
 /* ABOUT PAGE SPECIFIC
 -----------------------------------------------------------------------------*/
+.whatis{
+    color:#0e6fbe;
+    padding-top:0.5em;
+        font-size: 3em;
+    line-height: 1;
+        margin: 1rem;
+        
+    }
+ .abouticons {
+        
+        display:grid;
+        align-items: center;
+        width:90%;
+     margin:0 auto;
+     
+        
+        
+    }
+    
+    .abouticons a{
+        width:100%;
+        background-color: #3D3D3D;
+        display:grid;
+        grid-template-columns:  1fr 1fr;
+        align-items: center;
+        justify-items: center;
+        text-decoration: none;
+        margin:1rem 0;
+        border-radius: 2px;
+        box-shadow: 0 1px 6px rgba(0, 0, 0, 0.16), 0 2px 6px rgba(0, 0, 0, 0.23);
+    }
+           
+    .abouticons a img{
+        width:50px;       
+    }
 
+  #about-discordicon{
+        background-color:#7289da;
+    } 
+    
+    #about-twittericon{
+        background-color:#1da1f2;
+    }
 #about {
     color: #3d3d3d;
     text-align: left;
@@ -613,12 +659,12 @@ li em {
 
 }
 
-.creatordescription h4 {
+h4 {
     margin: 1rem;
     font-weight: bold;
-    text-align: center;
-    font-size: 1.3rem;
+    font-size: 1rem;
     font-family: 'Sintony', sans-serif;
+    color:#0e6fbe;
 }
 
 .creatorintro {
@@ -727,7 +773,7 @@ li em {
     -----------------------------------------------------------------------------*/
 
     .header {
-        grid-template-columns: 5% 5% 1fr 5%;
+        grid-template-columns: 50px 5% 1fr 50px;
         grid-template-areas:
         ". logo nav .";
         grid-area: header;
@@ -781,12 +827,12 @@ li em {
     
     li.computer {
         display: block;
-        box-shadow: 4px 4px rgba(0, 0, 0, 0.23);
+        box-shadow:0 1px 6px rgba(0, 0, 0, 0.16), 0 2px 6px rgba(0, 0, 0, 0.23);
     }
     
     li.computer:hover {
         transform: translateY(-1%) translateX(-1%);
-        box-shadow: 6px 6px rgba(0, 0, 0, 0.16);
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.32), 0 2px 6px rgba(0, 0, 0, 0.23);
         transition: 0.3s ease;
     }
 
@@ -953,15 +999,81 @@ li em {
 
 
     /* ABOUT PAGE SPECIFIC*/
+    #about{
+        margin:0 50px;
+        
+        
+    }
+    
+    .whatis{
+        padding-top: 0;
+        margin-left:0;
+        
+    }
+    
+    #about h2{
+        margin: 2em 0 1em;
+    }
+    .aboutintro{
+        margin-top:3em;
+        display:flex;
+        flex-flow:row nowrap;
+        border-bottom: 3px #0e6fbe;
+    }
+    .aboutintro2{
+        align-items: center;
+        width:75%
+       
+        
+    }
+    
+    #about p{
+        margin-left:0;
+    }
+    .abouticons {
+        
+        display:grid;
+        align-items: center;
+        width:25%;
+        
+        
+    }
+    .abouticons a{
+        width:100%;
+        background-color: #3D3D3D;
+        display:grid;
+        grid-template-columns:  1fr 1fr;
+        align-items: center;
+        justify-items: center;
+        text-decoration: none;
+        border-radius: 2px;
+        box-shadow: 0 1px 6px rgba(0, 0, 0, 0.16), 0 2px 6px rgba(0, 0, 0, 0.23);
+    }
+           
+    .abouticons a img{
+        width:50px;       
+    }
+    
+    
+    #about-discordicon{
+        background-color:#7289da;
+    } 
+    
+    #about-twittericon{
+        background-color:#1da1f2;
+    }
+    
+    
     .creator-text {
         display: block;
     }
 
     .profiles {
+        
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        grid-template-areas: "SYX MegaFire" "Bob Buttington";
+        grid-template-columns:1fr 50px 1fr;
+        grid-template-rows: 1fr 50px 1fr;
+        grid-template-areas: " SYX . MegaFire " " Bob . Buttington ";
     }
 
     .linebreak {
@@ -996,10 +1108,9 @@ li em {
     }
 
     .creatorpic {
-        height: 13rem;
+        width:90%;
+        margin-left:0;
     }
-
-
     /*gamepage--------------------*/
     #effin-grid {
         display: grid;
@@ -1039,9 +1150,6 @@ li em {
         width:100%;
     }
 
-    #steamstore a {
-        grid-row-start: 4;
-    }
 
     
     .gamegallery{
