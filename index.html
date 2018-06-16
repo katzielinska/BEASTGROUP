@@ -16,8 +16,6 @@
 
 <body>
 
-    <div class="wrapper">
-
         <header class="header" id="home-page-nav">
             <a href="index.html" class="logo">
                 <h1>S&S</h1>
@@ -42,63 +40,76 @@
 
         <div class="main">
             <section class="welcome">
-                <span id="hi">Hi!</span>
-                <h1 class="heading">We are Suits and Sandals and we create games for fun!
-                </h1>
+                <div class="hi">
+                    <span id="hi">Hi!</span>
+                    <h1 class="heading">We are Suits and Sandals and we create games for fun!
+                    </h1>
+                </div>
+                <article id="community">
+                    <h3>Join our community!</h3>
+                    <ul class="community-icons computer">
+                        <li> <a href="https://twitter.com/suitsnsandals"> <img src="images/icons/twitter-icon-white.png" alt="twitter icon" class="community-icon"> </a>
+                        </li>
+                        <li> <a href="https://discordapp.com/invite/xAz94jK"> <img src="images/icons/discord-icon-white.png" alt="discord icon" class="community-icon" id="discord2"> </a>
+                        </li>
+                        <li> <a href="https://steamcommunity.com/groups/suitsandsandals"> <img src="images/icons/steam-icon-white.png" alt="steam icon" class="community-icon"> </a>
+                        </li>
+                    </ul>
+                </article>
             </section>
 
             <section id="featured">
                 <h3 id="featured-heading">Featured Games</h3>
+                <article>
+                <div id="left"></div>    
                 <ul>
-                    <li class="slides fade"> <a href="games.html"> <img src="images/featured/war-girl.png" alt="War Girl featured picture" class="featured" id="first"></a>
+                    <li class="phoney"> <a href="games.html"> <img src="images/featured/war-girl.png" alt="War Girl featured picture"></a>
                     </li>
-                    <li class="slides fade"> <a href="games.html"> <img src="images/featured/vista-quest-pocket.png" alt="Vista Quest featured picture" class="featured"></a>
+                    <li class="slides fade slig"> <a href="games.html"> <img src="images/featured/desktop-feature-war-girl.png" alt="War Girl featured picture"></a>
                     </li>
-                    <li class="slides fade"> <a href="gamepage.html"> <img src="images/featured/khimera.png" alt="Khimera featured picture" class="featured"></a>
+                    <li class="phoney"> <a href="games.html"> <img src="images/featured/vista-quest-pocket.png" alt="Vista Quest featured picture"></a>
+                    </li>
+                    <li class="slides fade slig"> <a href="games.html"> <img src="images/featured/desktop-feature-game-page.png" alt="War Girl featured picture"></a>
+                    </li>
+                    <li class="phoney"> <a href="gamepage.html"> <img src="images/featured/khimera.png" alt="Khimera featured picture"></a>
+                    </li>
+                    <li class="slides fade slig"> <a href="games.html"> <img src="images/featured/desktop-feature-khimera.png" alt="War Girl featured picture"></a>
                     </li>
                 </ul>
-            </section>
-
-            <div id="dots">
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
-            </div>
-
-            <section id="community">
-                <h3>Join our community!</h3>
+                <div id="right"></div>
+                </article>                
+                <div id="dots">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
                 <ul class="community-icons phone">
-                    <li> <a href="https://twitter.com/suitsnsandals"> <img src="images/icons/twitter-icon-blue.svg" alt="twitter icon" class="community-icon"> </a>
-                    </li>
-                    <li> <a href="https://discordapp.com/invite/xAz94jK"> <img src="images/icons/discord-icon-blue.svg" alt="discord icon" class="community-icon" id="discord"> </a>
-                    </li>
-                    <li> <a href="https://steamcommunity.com/groups/suitsandsandals"> <img src="images/icons/steam-icon-blue.png" alt="steam icon" class="community-icon"> </a>
-                    </li>
-                </ul>
-
-                <ul class="community-icons computer">
-                    <li> <a href="https://twitter.com/suitsnsandals"> <img src="images/icons/twitter-icon-white.png" alt="twitter icon" class="community-icon"> </a>
-                    </li>
-                    <li> <a href="https://discordapp.com/invite/xAz94jK"> <img src="images/icons/discord-icon-white.png" alt="discord icon" class="community-icon" id="discord2"> </a>
-                    </li>
-                    <li> <a href="https://steamcommunity.com/groups/suitsandsandals"> <img src="images/icons/steam-icon-white.png" alt="steam icon" class="community-icon"> </a>
-                    </li>
+                        <li> <a href="https://twitter.com/suitsnsandals"> <img src="images/icons/twitter-icon-blue.svg" alt="twitter icon" class="community-icon"> </a>
+                        </li>
+                        <li> <a href="https://discordapp.com/invite/xAz94jK"> <img src="images/icons/discord-icon-blue.svg" alt="discord icon" class="community-icon" id="discord"> </a>
+                        </li>
+                        <li> <a href="https://steamcommunity.com/groups/suitsandsandals"> <img src="images/icons/steam-icon-blue.png" alt="steam icon" class="community-icon"> </a>
+                        </li>
                 </ul>
             </section>
+            <section class="emptiness"></section>
         </div>
         <!-- .content -->
 
-        <footer class="footer">
-
-            <small> 
-                Copyright Suits and Sandals 2018 <br>
-                Founded June 16, 2010 </small>
-        </footer>
+    <footer class="footer">
+        <small> Copyright Suits and Sandals 2018 <br>
+                Founded June 16, 2010 
+        </small>
+        <ul class="community-icons computer">
+            <li> <a href="https://twitter.com/suitsnsandals"> <img src="images/icons/twitter-icon-white.png" alt="twitter icon" class="community-icon"> </a>
+            </li>
+            <li> <a href="https://discordapp.com/invite/xAz94jK"> <img src="images/icons/discord-icon-white.png" alt="discord icon" class="community-icon" id="discord2"> </a>
+            </li>
+            <li> <a href="https://steamcommunity.com/groups/suitsandsandals"> <img src="images/icons/steam-icon-white.png" alt="steam icon" class="community-icon"> </a>
+            </li>
+        </ul>
+    </footer>
         <!-- .footer -->
-
-    </div>
-    <!-- .wrapper -->
-
 </body>
 
 <script src="js/jquery-3.3.1.min.js"></script>
