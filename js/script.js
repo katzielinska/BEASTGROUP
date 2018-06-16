@@ -10,7 +10,7 @@ $(document).ready(function() {
         $("#main-nav").toggleClass("dole");
         $(".header").toggleClass("dole");
         $(".burger-menu a").toggleClass("xified");
-        $(".logo").toggleClass("scaled",500);
+        $(".logo").toggleClass("scaled");
     });
 
     $(SELALL).on('click', function () {
@@ -52,5 +52,42 @@ $(document).ready(function() {
         }
         lastScrollTop = st;
     });
+    
+    if ($(window).width() > 768) {
+
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        setInterval(function() {
+            showSlides(++slideIndex);
+        }, 3000);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("slides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    }
 
 });
